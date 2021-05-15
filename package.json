@@ -113,6 +113,13 @@
   "jsii": {
     "outdir": "dist",
     "targets": {
+      "java": {
+        "package": "io.github.hsiehshujeng.projen.inception",
+        "maven": {
+          "groupId": "io.github.hsiehshujeng",
+          "artifactId": "projen-inception"
+        }
+      },
       "python": {
         "distName": "scotthsieh_projen_inception",
         "module": "scotthsieh_projen_inception"

@@ -28,6 +28,8 @@ logs
 node_modules/
 npm-debug.log*
 pids
+private.pem
+public.pem
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
 tsconfig.json
 yarn-debug.log*

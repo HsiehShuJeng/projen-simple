@@ -21,7 +21,7 @@ const project = new AwsCdkConstructLibrary({
   eslint: true,
   dependabot: true,
 
-  gitignore: ['.idea'],
+  gitignore: ['.idea', 'public.pem', 'private.pem'],
   defaultReleaseBranch: 'main',
 
   // publish to npm
@@ -34,6 +34,13 @@ const project = new AwsCdkConstructLibrary({
   publishToPypi: {
     distName: 'scotthsieh_projen_inception',
     module: 'scotthsieh_projen_inception',
+  },
+
+  // publish to Maven
+  publishToMaven: {
+    mavenGroupId: 'io.github.hsiehshujeng',
+    mavenArtifactId: 'projen-inception',
+    javaPackage: 'io.github.hsiehshujeng.projen.inception'
   },
 
   // cdkDependencies: undefined,        /* Which AWS CDK modules (those that start with "@aws-cdk/") does this library require when consumed? */
