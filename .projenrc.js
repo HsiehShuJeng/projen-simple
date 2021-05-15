@@ -23,8 +23,12 @@ const project = new AwsCdkConstructLibrary({
 
   gitignore: ['.idea'],
   defaultReleaseBranch: 'main',
-  releaseBranches: ['main'],
+
+  // publish to npm
   releaseToNpm: true,
+  releaseBranches: ['main'],
+  releaseWorkflow: true,
+  releaseEveryCommit: true, //will run the release GitHub Action on each push to the defined
 
 
   // cdkDependencies: undefined,        /* Which AWS CDK modules (those that start with "@aws-cdk/") does this library require when consumed? */
