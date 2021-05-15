@@ -1,4 +1,4 @@
-const { AwsCdkConstructLibrary, ProjectType } = require('projen');
+const { AwsCdkConstructLibrary, NpmAccess, ProjectType } = require('projen');
 const project = new AwsCdkConstructLibrary({
   author: 'scott.hsieh',
   authorAddress: 'fantatsicSie@hotmail.com',
@@ -6,15 +6,26 @@ const project = new AwsCdkConstructLibrary({
   defaultReleaseBranch: 'main',
   name: 'projen-example',
   repositoryUrl: 'https://github.com/HsiehShuJeng/projen-simple.git',
-  projectName: 'projen-example',
+  projectName: 'projen-scott-example',
   projectType: ProjectType.LIB,
   cdkAssert: true,
   cdkDependencies: ['@aws-cdk/core', '@aws-cdk/aws-lambda'],
+  cdkVersionPinning: false, // see https://www.matthewbonig.com/2021/04/06/automating-construct-publishing/
+
+  devDeps: ['esbuild'],
+
+  npmAccess: NpmAccess.PUBLIC,
+
   mergify: true,
   docgen: true,
   eslint: true,
   dependabot: true,
+
   gitignore: ['.idea'],
+  defaultReleaseBranch: 'main',
+  releaseBranches: ['main'],
+  releaseToNpm: true,
+
 
   // cdkDependencies: undefined,        /* Which AWS CDK modules (those that start with "@aws-cdk/") does this library require when consumed? */
   // cdkTestDependencies: undefined,    /* AWS CDK modules required for testing. */
