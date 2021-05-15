@@ -2,7 +2,7 @@
   "name": "projen-example",
   "repository": {
     "type": "git",
-    "url": "https://github.com/HsiehShuJeng/projen-example.git"
+    "url": "https://github.com/HsiehShuJeng/projen-simple.git"
   },
   "scripts": {
     "clobber": "npx projen clobber",

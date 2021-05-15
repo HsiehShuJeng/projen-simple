@@ -5,7 +5,7 @@ const project = new AwsCdkConstructLibrary({
   cdkVersion: '1.103.0',
   defaultReleaseBranch: 'main',
   name: 'projen-example',
-  repositoryUrl: 'https://github.com/HsiehShuJeng/projen-example.git',
+  repositoryUrl: 'https://github.com/HsiehShuJeng/projen-simple.git',
   projectName: 'projen-example',
   projectType: ProjectType.LIB,
   cdkAssert: true,
