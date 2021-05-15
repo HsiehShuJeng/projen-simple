@@ -30,6 +30,11 @@ const project = new AwsCdkConstructLibrary({
   releaseWorkflow: true,
   releaseEveryCommit: true, //will run the release GitHub Action on each push to the defined
 
+  // publish to PyPi
+  publishToPypi: {
+    distName: 'scotthsieh_projen_inception',
+    module: 'scotthsieh_projen_inception',
+  },
 
   // cdkDependencies: undefined,        /* Which AWS CDK modules (those that start with "@aws-cdk/") does this library require when consumed? */
   // cdkTestDependencies: undefined,    /* AWS CDK modules required for testing. */
