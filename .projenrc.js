@@ -40,7 +40,7 @@ const project = new AwsCdkConstructLibrary({
   publishToMaven: {
     mavenGroupId: 'io.github.hsiehshujeng',
     mavenArtifactId: 'projen-inception',
-    javaPackage: 'io.github.hsiehshujeng.projen.inception'
+    javaPackage: 'io.github.hsiehshujeng.projen.inception',
   },
 
   // cdkDependencies: undefined,        /* Which AWS CDK modules (those that start with "@aws-cdk/") does this library require when consumed? */
