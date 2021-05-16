@@ -41,7 +41,7 @@ const project = new AwsCdkConstructLibrary({
     mavenGroupId: 'io.github.hsiehshujeng',
     mavenArtifactId: 'projen-inception',
     javaPackage: 'io.github.hsiehshujeng.projen.inception',
-    mavenEndpoint: 'https://s01.oss.sonatype.org' // check https://central.sonatype.org/publish/release/#login-into-ossrh
+    mavenEndpoint: 'https://s01.oss.sonatype.org', // check https://central.sonatype.org/publish/release/#login-into-ossrh
   },
 
   // publish to dotnet
