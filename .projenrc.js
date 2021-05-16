@@ -41,7 +41,19 @@ const project = new AwsCdkConstructLibrary({
     mavenGroupId: 'io.github.hsiehshujeng',
     mavenArtifactId: 'projen-inception',
     javaPackage: 'io.github.hsiehshujeng.projen.inception',
+    mavenEndpoint: 'https://s01.oss.sonatype.org' // check https://central.sonatype.org/publish/release/#login-into-ossrh
   },
+
+  // publish to dotnet
+  // publishToNuget: {
+  //   dotNetNamespace: string,
+  //   packageId: string
+  // }
+
+  // publish to Go
+  // publishToGo: {
+  //   moduleName: string
+  // }
 
   // cdkDependencies: undefined,        /* Which AWS CDK modules (those that start with "@aws-cdk/") does this library require when consumed? */
   // cdkTestDependencies: undefined,    /* AWS CDK modules required for testing. */
