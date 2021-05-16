@@ -1,8 +1,9 @@
 const { AwsCdkConstructLibrary, NpmAccess, ProjectType } = require('projen');
 const project = new AwsCdkConstructLibrary({
   author: 'scott.hsieh',
+  authorName: 'Shu-Jeng Hsieh',
   authorAddress: 'fantatsicSie@hotmail.com',
-  cdkVersion: '1.103.0',
+  cdkVersion: '1.104.0',
   defaultReleaseBranch: 'main',
   name: 'projen-example',
   repositoryUrl: 'https://github.com/HsiehShuJeng/projen-simple.git',
@@ -52,7 +53,7 @@ const project = new AwsCdkConstructLibrary({
 
   // publish to Go
   // publishToGo: {
-  //   moduleName: 'github.com/HsiehShuJeng/projen-inception',
+  //   moduleName: 'github.com/HsiehShuJeng',
   // },
 
   // cdkDependencies: undefined,        /* Which AWS CDK modules (those that start with "@aws-cdk/") does this library require when consumed? */
