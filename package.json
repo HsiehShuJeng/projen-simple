@@ -123,6 +123,10 @@
       "python": {
         "distName": "scotthsieh_projen_inception",
         "module": "scotthsieh_projen_inception"
+      },
+      "dotnet": {
+        "namespace": "ScottHsieh.Examples",
+        "packageId": "Projen.Inception"
       }
     },
     "tsc": {

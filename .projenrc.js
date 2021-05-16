@@ -45,15 +45,15 @@ const project = new AwsCdkConstructLibrary({
   },
 
   // publish to dotnet
-  // publishToNuget: {
-  //   dotNetNamespace: string,
-  //   packageId: string
-  // }
+  publishToNuget: {
+    dotNetNamespace: 'ScottHsieh.Examples',
+    packageId: 'Projen.Inception',
+  },
 
   // publish to Go
   // publishToGo: {
-  //   moduleName: string
-  // }
+  //   moduleName: 'github.com/HsiehShuJeng/projen-inception',
+  // },
 
   // cdkDependencies: undefined,        /* Which AWS CDK modules (those that start with "@aws-cdk/") does this library require when consumed? */
   // cdkTestDependencies: undefined,    /* AWS CDK modules required for testing. */
