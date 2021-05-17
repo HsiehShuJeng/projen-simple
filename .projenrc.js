@@ -19,7 +19,11 @@ const project = new AwsCdkConstructLibrary({
   cdkAssert: true,
   cdkVersionPinning: false, // see https://www.matthewbonig.com/2021/04/06/automating-construct-publishing/
 
-  devDeps: ['esbuild'],
+  devDeps: [
+    'esbuild',
+    'projen-statemachine-example',
+    'source-map-support',
+  ],
 
   npmAccess: NpmAccess.PUBLIC,
 

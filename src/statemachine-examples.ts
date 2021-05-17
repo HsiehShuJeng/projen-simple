@@ -16,16 +16,16 @@ import { CallApiGatewayRestApiEndpointwithResultSelector } from './utilities';
 
 export interface StateMachineApiGatewayExampleProps {
   /**
-     * A stage name for the rest api
-     *
-     * @default 'default'
-     */
+       * A stage name for the rest api
+       *
+       * @default 'default'
+       */
   readonly stageName: string;
   /**
-     * The path part for the resource
-     *
-     * @default 'pets'
-     */
+       * The path part for the resource
+       *
+       * @default 'pets'
+       */
   readonly partPath: string;
 }
 
@@ -62,12 +62,12 @@ export class StateMachineApiGatewayExample extends cdk.Construct {
   }
 
   /**
-     * Creates an API Gateway Rest API.
-     *
-     * @param stageName A stage name for the rest api
-     * @param partPath The path part for the resource
-     * @returns a rest api.
-     */
+       * Creates an API Gateway Rest API.
+       *
+       * @param stageName A stage name for the rest api
+       * @param partPath The path part for the resource
+       * @returns a rest api.
+       */
   private _createRestApi = (stageName: string, partPath: string) => {
     const petStoreapi = new RestApi(this, 'ApiGatewayPetStoreApi', {
       deploy: true,
@@ -184,13 +184,13 @@ export class StateMachineApiGatewayExample extends cdk.Construct {
   }
 
   /**
-     * Creates an IAM role for Step Functions.
-     *
-     * @param restApi The rest APIs for adding and storing pets.
-     * @param stageName The stage name for the rest api
-     * @param partPath The path part for the resource
-     * @returns an IAM role for Step Functions.
-     */
+       * Creates an IAM role for Step Functions.
+       *
+       * @param restApi The rest APIs for adding and storing pets.
+       * @param stageName The stage name for the rest api
+       * @param partPath The path part for the resource
+       * @returns an IAM role for Step Functions.
+       */
   private _createWorkFlowRole = (restApi: RestApi, stageName: string, partPath: string) => {
     const workFlowExecutionRole = new iam.Role(this, 'StepFunctionExecutionRole', {
       assumedBy: new iam.ServicePrincipal('states.amazonaws.com'),
@@ -210,14 +210,14 @@ export class StateMachineApiGatewayExample extends cdk.Construct {
   }
 
   /**
-   * Creates a workflow.
-   *
-   * @param executionRole an IAM role for StepFunctions to execute Rest APIs.
-   * @param restApi The rest APIs for adding and storing pets.
-   * @param stageName The stage name for the rest api.
-   * @param partPath The path part for the resource.
-   * @returns a state machine.
-   */
+     * Creates a workflow.
+     *
+     * @param executionRole an IAM role for StepFunctions to execute Rest APIs.
+     * @param restApi The rest APIs for adding and storing pets.
+     * @param stageName The stage name for the rest api.
+     * @param partPath The path part for the resource.
+     * @returns a state machine.
+     */
   private _createStateMachine = (
     executionRole: iam.Role,
     restApi: RestApi,

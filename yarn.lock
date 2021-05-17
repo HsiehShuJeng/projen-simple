@@ -5458,6 +5458,17 @@ progress@^2.0.0, progress@^2.0.3:
   resolved "https://registry.yarnpkg.com/progress/-/progress-2.0.3.tgz#7e8cf8d8f5b8f239c1bc68beb4eb78567d572ef8"
   integrity sha512-7PiHtLll5LdnKIMw100I+8xJXR5gW2QwWYkT6iJva0bXitZKa/XMrSbdmg3r2Xnaidz9Qumd0VPaMrZlF9V9sA==
 
+projen-statemachine-example@^0.1.16:
+  version "0.1.16"
+  resolved "https://registry.yarnpkg.com/projen-statemachine-example/-/projen-statemachine-example-0.1.16.tgz#09e5165bfd963df20c088b7fd9d71735bcca0488"
+  integrity sha512-hkdvvUB7zrSfkxERrwO3fOa94gQdLtona1isCj0uo6oU+HYOKH9YMxXR8LEdTvKcf6m1wJLZ7+mfL7jQMtud5A==
+  dependencies:
+    "@aws-cdk/aws-apigateway" "^1.104.0"
+    "@aws-cdk/aws-iam" "^1.104.0"
+    "@aws-cdk/aws-stepfunctions" "^1.104.0"
+    "@aws-cdk/aws-stepfunctions-tasks" "^1.104.0"
+    "@aws-cdk/core" "^1.104.0"
+
 projen@^0.17.91:
   version "0.17.91"
   resolved "https://registry.yarnpkg.com/projen/-/projen-0.17.91.tgz#f650ebff71d10f6d942576e1dd1b9fd9b0d136e6"
@@ -6029,7 +6040,7 @@ source-map-resolve@^0.5.0:
     source-map-url "^0.4.0"
     urix "^0.1.0"
 
-source-map-support@^0.5.6:
+source-map-support@^0.5.19, source-map-support@^0.5.6:
   version "0.5.19"
   resolved "https://registry.yarnpkg.com/source-map-support/-/source-map-support-0.5.19.tgz#a98b62f86dcaf4f67399648c085291ab9e8fed61"
   integrity sha512-Wonm7zOCIJzBGQdB+thsPar0kYuCIzYvxZwlBa87yi/Mdjv7Tip2cyVbLj5o0cFPN4EVkuTwb3GDDyUx2DGnGw==
