@@ -10,4 +10,5 @@ This library constrcution is referred to [this AWS blog](https://aws.amazon.com/
 ## TypeScript
    ```bash
    $ cdk --init language typescript
+   $ yarn add projen-statemachine-example
    ``` 

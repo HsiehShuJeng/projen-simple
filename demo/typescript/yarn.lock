@@ -21,7 +21,7 @@
     "@aws-cdk/cx-api" "1.104.0"
     constructs "^3.3.69"
 
-"@aws-cdk/aws-apigateway@1.104.0":
+"@aws-cdk/aws-apigateway@1.104.0", "@aws-cdk/aws-apigateway@^1.104.0":
   version "1.104.0"
   resolved "https://registry.yarnpkg.com/@aws-cdk/aws-apigateway/-/aws-apigateway-1.104.0.tgz#de81b93a6c2d936153792fef9b389bbe024ce864"
   integrity sha512-VT3NXzdICPZ0jMfrnO48r87393sdpSJRH4jg4Wq1AKP0jFRdO4VufwOD1JvHSf8S+y2EOqik89MZs3+cL0Tw1Q==
@@ -4078,6 +4078,17 @@ projen-example@^0.1.15:
   integrity sha512-TnLRlxrDh7nHV+k+x0H500QfKsFZxP4tmL14M3HiWX9WlpqjsXtim8XbkLLW+k1tR0vn3apuQXisDA3fA+6NqA==
   dependencies:
     "@aws-cdk/aws-lambda" "^1.104.0"
+    "@aws-cdk/core" "^1.104.0"
+
+projen-statemachine-example@^0.1.16:
+  version "0.1.16"
+  resolved "https://registry.yarnpkg.com/projen-statemachine-example/-/projen-statemachine-example-0.1.16.tgz#09e5165bfd963df20c088b7fd9d71735bcca0488"
+  integrity sha512-hkdvvUB7zrSfkxERrwO3fOa94gQdLtona1isCj0uo6oU+HYOKH9YMxXR8LEdTvKcf6m1wJLZ7+mfL7jQMtud5A==
+  dependencies:
+    "@aws-cdk/aws-apigateway" "^1.104.0"
+    "@aws-cdk/aws-iam" "^1.104.0"
+    "@aws-cdk/aws-stepfunctions" "^1.104.0"
+    "@aws-cdk/aws-stepfunctions-tasks" "^1.104.0"
     "@aws-cdk/core" "^1.104.0"
 
 promptly@^3.2.0:
