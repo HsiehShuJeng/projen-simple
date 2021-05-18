@@ -1,3 +1,5 @@
+# How a successful deployment looks like  
+![image](../../../images/java_stack.png)  
 # Welcome to your CDK Java project!
 
 This is a blank project for Java development with CDK.
