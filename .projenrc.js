@@ -2,7 +2,12 @@ const { AwsCdkConstructLibrary, NpmAccess, ProjectType } = require('projen');
 const project = new AwsCdkConstructLibrary({
   author: 'scott.hsieh',
   authorName: 'Shu-Jeng Hsieh',
-  authorAddress: 'fantatsicSie@hotmail.com',
+  authorAddress: 'https://fantasticsie.medium.com/',
+  keywords: ['stepfunctions', 'apigateway'],
+
+  catalog: {
+    twitter: 'fantasticHsieh'
+  },
 
   cdkVersion: '1.104.0',
   defaultReleaseBranch: 'main',
@@ -11,7 +16,8 @@ const project = new AwsCdkConstructLibrary({
   projectName: 'projen-statemachine-example',
   projectType: ProjectType.LIB,
 
-  cdkDependencies: ['@aws-cdk/core',
+  cdkDependencies: [
+    '@aws-cdk/core',
     '@aws-cdk/aws-apigateway',
     '@aws-cdk/aws-iam',
     '@aws-cdk/aws-stepfunctions',
@@ -21,7 +27,6 @@ const project = new AwsCdkConstructLibrary({
 
   devDeps: [
     'esbuild',
-    'projen-statemachine-example',
     'source-map-support',
   ],
 
@@ -32,7 +37,8 @@ const project = new AwsCdkConstructLibrary({
   eslint: true,
   dependabot: true,
 
-  gitignore: ['.idea',
+  gitignore: [
+    'cdk.out/',
     // For Mavn GPG
     'public.pem',
     'private.pem',
@@ -43,7 +49,17 @@ const project = new AwsCdkConstructLibrary({
     '.pytest_cache',
     '.env',
     '.venv',
-    '*.egg-info'],
+    '*.egg-info',
+    // For Java demo
+    '.classpath.txt',
+    'target/',
+    '.classpath',
+    '.project',
+    '.idea',
+    '.settings',
+    '.vscode/',
+    '*.iml'
+  ],
   defaultReleaseBranch: 'main',
 
   // publish to npm

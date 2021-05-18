@@ -72,10 +72,6 @@
       "type": "build"
     },
     {
-      "name": "projen-statemachine-example",
-      "type": "build"
-    },
-    {
       "name": "projen",
       "version": "^0.17.91",
       "type": "build"

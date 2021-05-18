@@ -3,9 +3,10 @@ Build a custom construct based on an AWS Blog post and use projen to publish to 
 (Hope Go is coming soon)  
 
 # Architecture  
-This library constrcution is referred to [this AWS blog](https://aws.amazon.com/tw/blogs/compute/introducing-amazon-api-gateway-service-integration-for-aws-step-functions/).  
+This library constrcution is referred to the first example in this AWS blog, [*Introducing Amazon API Gateway service integration for AWS Step Functions*](https://aws.amazon.com/tw/blogs/compute/introducing-amazon-api-gateway-service-integration-for-aws-step-functions/) written by Benjanmin Smith. After you deploy the stack with whatever programming language you like, i.e., Typescript, Python, Java, or C sharp, you'll get a view similar to the following diagram:  
+![image](images/designer_view.png)  
 
-# How to utilize polyglot packages    
+# How to utilize polyglot packages and deploy     
 ## TypeScript
    ```bash
    $ cdk --init language typescript
@@ -60,7 +61,7 @@ EOL
 ## Java  
    ```bash
    $ cdk init --language java
-
+   $ mvn package
    ```
    ```xml
    .
@@ -120,6 +121,43 @@ EOL
         }
     }
    ```
+## C#
+    ```bash
+    $ cdk init --language csharp
+    $ dotnet add src/Csharp package Projen.Statemachine --version 0.1.21
+    ```
+    ```cs
+    using Amazon.CDK;
+    using ScottHsieh.Examples;
+
+    namespace Csharp
+    {
+        public class CsharpStack : Stack
+        {
+            internal CsharpStack(Construct scope, string id, IStackProps props = null) : base(scope, id, props)
+            {
+                string stageName = "default";
+                string partPath = "pets";
+
+                var exampleConstruct = new StateMachineApiGatewayExample(this, "KerKer", new StateMachineApiGatewayExampleProps
+                {
+                    StageName = stageName,
+                    PartPath = partPath
+                });
+
+                new CfnOutput(this, "OStateMachine", new CfnOutputProps
+                {
+                    Value = exampleConstruct.StateMachine.StateMachineArn
+                });
+                new CfnOutput(this, "OExecutionOutput", new CfnOutputProps
+                {
+                    Value = exampleConstruct.ExecutionInput,
+                    Description = "Sample input to StartExecution."
+                });
+            }
+        }
+    }
+    ```
 
 # References  
 * [jsii reference](https://github.com/cdklabs/jsii-release)  

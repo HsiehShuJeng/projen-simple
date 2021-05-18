@@ -1,6 +1,35 @@
 
 # How a successful deployment looks like
 ![image](../../../images/python_stack.png)  
+## Deployment Reference  
+```bash
+$ cdk init --language python
+$ cat <<EOL > requirements.txt
+aws-cdk.core
+scotthsieh_projen_statemachine
+EOL
+$ python -m pip install -r requirements.txt
+```
+```python
+from aws_cdk import core as cdk
+from scotthsieh_projen_statemachine import StateMachineApiGatewayExample
+
+class PythonStack(cdk.Stack):
+    def __init__(self, scope: cdk.Construct, construct_id: str, **kwargs) -> None:
+        super().__init__(scope, construct_id, **kwargs)
+        
+        stage_name = 'default'
+        part_path = 'pets'
+        example_construct = StateMachineApiGatewayExample(
+            self, 'PythonStatemachne', stage_name=stage_name, part_path=part_path,
+        )
+
+        cdk.CfnOutput(self, "OStateMachine",
+            value=example_construct.state_machine.state_machine_arn
+        )
+        cdk.CfnOutput(self, "OExecutionOutput", value=example_construct.execution_input, description="Sample input to StartExecution.")
+```
+
 # Welcome to your CDK Python project!
 
 This is a blank project for Python development with CDK.
