@@ -1,7 +1,7 @@
 # How a successful deployment looks like  
 ![image](../../../images/typescript_stack.png)  
 
-If you want to deploy the stack directly after cloning this repository, check the following commands.  
+If you want to deploy the stack directly after cloning this repository, refer to the following commands.  
 ```bash
 $ cd ${projen_root}
 $ pj build

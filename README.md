@@ -57,6 +57,69 @@ EOL
             )
             cdk.CfnOutput(self, "OExecutionOutput", value=example_construct.execution_input, description="Sample input to StartExecution.")
    ```
+## Java  
+   ```bash
+   $ cdk init --language java
+
+   ```
+   ```xml
+   .
+   .
+   <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <custom.construct.version>0.1.20</custom.construct.version>
+        <cdk.version>1.104.0</cdk.version>
+        <junit.version>5.7.1</junit.version>
+    </properties>
+    .
+    .
+    <dependencies>
+        <!-- AWS Cloud Development Kit -->
+        .
+        .
+        .
+        <dependency>
+            <groupId>io.github.hsiehshujeng</groupId>
+            <artifactId>projen-statemachine</artifactId>
+            <version>${custom.construct.version}</version>
+        </dependency>
+        .
+        .
+        .
+    </dependencies>
+   ```
+   ```java
+   package com.myorg;
+
+   import software.amazon.awscdk.core.Construct;
+   import software.amazon.awscdk.core.CfnOutput;
+   import software.amazon.awscdk.core.CfnOutputProps;
+   import software.amazon.awscdk.core.Stack;
+   import software.amazon.awscdk.core.StackProps;
+   import io.github.hsiehshujeng.projen.statemachine.*;
+   
+   public class JavaStack extends Stack {
+       public JavaStack(final Construct scope, final String id) {
+           this(scope, id, null);
+        }
+
+        public JavaStack(final Construct scope, final String id, final StackProps props) {
+            super(scope, id, props);
+            
+            String stageName = "default";
+            String partPath = "pets";
+            StateMachineApiGatewayExample exampleConstruct = new StateMachineApiGatewayExample(this, "KerKer",
+                StateMachineApiGatewayExampleProps.builder().stageName(stageName).partPath(partPath).build());
+
+            new CfnOutput(this, "OStateMachine",
+                CfnOutputProps.builder()
+                    .value(exampleConstruct.getStateMachine().getStateMachineArn()).build());
+            new CfnOutput(this, "OExecutionOutput", CfnOutputProps.builder()
+                .value(exampleConstruct.getExecutionInput())
+                .description("Sample input to StartExecution.").build());
+        }
+    }
+   ```
 
 # References  
 * [jsii reference](https://github.com/cdklabs/jsii-release)  
