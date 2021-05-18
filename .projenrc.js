@@ -6,7 +6,7 @@ const project = new AwsCdkConstructLibrary({
   keywords: ['stepfunctions', 'apigateway'],
 
   catalog: {
-    twitter: 'fantasticHsieh'
+    twitter: 'fantasticHsieh',
   },
 
   cdkVersion: '1.104.0',
@@ -21,7 +21,8 @@ const project = new AwsCdkConstructLibrary({
     '@aws-cdk/aws-apigateway',
     '@aws-cdk/aws-iam',
     '@aws-cdk/aws-stepfunctions',
-    '@aws-cdk/aws-stepfunctions-tasks'],
+    '@aws-cdk/aws-stepfunctions-tasks',
+  ],
   cdkAssert: true,
   cdkVersionPinning: false, // see https://www.matthewbonig.com/2021/04/06/automating-construct-publishing/
 
@@ -58,7 +59,7 @@ const project = new AwsCdkConstructLibrary({
     '.idea',
     '.settings',
     '.vscode/',
-    '*.iml'
+    '*.iml',
   ],
   defaultReleaseBranch: 'main',
 

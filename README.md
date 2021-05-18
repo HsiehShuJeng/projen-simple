@@ -1,5 +1,5 @@
 # projen-simple  
-Build a custom construct based on an AWS Blog post and use projen to publish to 4 language repositories.   
+Build a custom construct based on an example in an AWS Blog post and use [projen](https://github.com/projen/projen) to publish to 4 language repositories.   
 (Hope Go is coming soon)  
 
 # Architecture  
