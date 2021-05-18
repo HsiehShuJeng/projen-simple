@@ -1,6 +1,6 @@
 
 # How a successful deployment looks like
-![image](../../images/python_stack.png)  
+![image](../../../images/python_stack.png)  
 # Welcome to your CDK Python project!
 
 This is a blank project for Python development with CDK.

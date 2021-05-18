@@ -5,7 +5,7 @@ Build a custom construct based on an AWS Blog post and use projen to publish to 
 # Architecture  
 This library constrcution is referred to [this AWS blog](https://aws.amazon.com/tw/blogs/compute/introducing-amazon-api-gateway-service-integration-for-aws-step-functions/).  
 
-# Demonstration about How to Utilize Polyglot Packages  
+# How to utilize polyglot packages    
 ## TypeScript
    ```bash
    $ cdk --init language typescript

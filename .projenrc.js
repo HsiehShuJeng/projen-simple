@@ -43,8 +43,7 @@ const project = new AwsCdkConstructLibrary({
     '.pytest_cache',
     '.env',
     '.venv',
-    '*.egg-info'
-  ],
+    '*.egg-info'],
   defaultReleaseBranch: 'main',
 
   // publish to npm
