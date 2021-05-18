@@ -1,0 +1,431 @@
+{
+  "version": "11.0.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "TypescriptStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "TypescriptStack.template.json",
+        "validateOnSynth": false
+      },
+      "metadata": {
+        "/TypescriptStack/KerKer/ApiGatewayPetStoreApi/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "KerKerApiGatewayPetStoreApi9BA24AA9",
+            "trace": [
+              "new RestApi (/opt/learning/projen-example/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:401:26)",
+              "StateMachineApiGatewayExample._createRestApi (/opt/learning/projen-example/lib/statemachine-examples.js:35:33)",
+              "new StateMachineApiGatewayExample (/opt/learning/projen-example/lib/statemachine-examples.js:205:30)",
+              "new TypescriptStack (/opt/learning/projen-example/lib/demo/typescript/typescript-stack.js:12:34)",
+              "Object.<anonymous> (/opt/learning/projen-example/lib/demo/typescript/typescript-stack.js:20:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1108:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1137:10)",
+              "Module.load (node:internal/modules/cjs/loader:988:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:828:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/TypescriptStack/KerKer/ApiGatewayPetStoreApi/CloudWatchRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "KerKerApiGatewayPetStoreApiCloudWatchRoleEC1F55E0",
+            "trace": [
+              "new Role (/opt/learning/projen-example/node_modules/@aws-cdk/aws-iam/lib/role.js:72:22)",
+              "RestApi._configureCloudWatchRole (/opt/learning/projen-example/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:250:22)",
+              "new RestApi (/opt/learning/projen-example/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:417:18)",
+              "StateMachineApiGatewayExample._createRestApi (/opt/learning/projen-example/lib/statemachine-examples.js:35:33)",
+              "new StateMachineApiGatewayExample (/opt/learning/projen-example/lib/statemachine-examples.js:205:30)",
+              "new TypescriptStack (/opt/learning/projen-example/lib/demo/typescript/typescript-stack.js:12:34)",
+              "Object.<anonymous> (/opt/learning/projen-example/lib/demo/typescript/typescript-stack.js:20:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1108:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1137:10)",
+              "Module.load (node:internal/modules/cjs/loader:988:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:828:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/TypescriptStack/KerKer/ApiGatewayPetStoreApi/Account": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "KerKerApiGatewayPetStoreApiAccount7D8F014C",
+            "trace": [
+              "RestApi._configureCloudWatchRole (/opt/learning/projen-example/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:254:26)",
+              "new RestApi (/opt/learning/projen-example/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:417:18)",
+              "StateMachineApiGatewayExample._createRestApi (/opt/learning/projen-example/lib/statemachine-examples.js:35:33)",
+              "new StateMachineApiGatewayExample (/opt/learning/projen-example/lib/statemachine-examples.js:205:30)",
+              "new TypescriptStack (/opt/learning/projen-example/lib/demo/typescript/typescript-stack.js:12:34)",
+              "Object.<anonymous> (/opt/learning/projen-example/lib/demo/typescript/typescript-stack.js:20:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1108:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1137:10)",
+              "Module.load (node:internal/modules/cjs/loader:988:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:828:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/TypescriptStack/KerKer/ApiGatewayPetStoreApi/Deployment/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "KerKerApiGatewayPetStoreApiDeployment5EC0C45282594ef1a2ef3f6f30f948fa77aa1373",
+            "trace": [
+              "new Deployment (/opt/learning/projen-example/node_modules/@aws-cdk/aws-apigateway/lib/deployment.js:48:25)",
+              "RestApi._configureDeployment (/opt/learning/projen-example/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:278:38)",
+              "new RestApi (/opt/learning/projen-example/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:419:14)",
+              "StateMachineApiGatewayExample._createRestApi (/opt/learning/projen-example/lib/statemachine-examples.js:35:33)",
+              "new StateMachineApiGatewayExample (/opt/learning/projen-example/lib/statemachine-examples.js:205:30)",
+              "new TypescriptStack (/opt/learning/projen-example/lib/demo/typescript/typescript-stack.js:12:34)",
+              "Object.<anonymous> (/opt/learning/projen-example/lib/demo/typescript/typescript-stack.js:20:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1108:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1137:10)",
+              "Module.load (node:internal/modules/cjs/loader:988:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:828:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/TypescriptStack/KerKer/ApiGatewayPetStoreApi/DeploymentStage.default/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "KerKerApiGatewayPetStoreApiDeploymentStagedefaultCE3D7C35",
+            "trace": [
+              "new Stage (/opt/learning/projen-example/node_modules/@aws-cdk/aws-apigateway/lib/stage.js:61:26)",
+              "RestApi._configureDeployment (/opt/learning/projen-example/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:286:36)",
+              "new RestApi (/opt/learning/projen-example/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:419:14)",
+              "StateMachineApiGatewayExample._createRestApi (/opt/learning/projen-example/lib/statemachine-examples.js:35:33)",
+              "new StateMachineApiGatewayExample (/opt/learning/projen-example/lib/statemachine-examples.js:205:30)",
+              "new TypescriptStack (/opt/learning/projen-example/lib/demo/typescript/typescript-stack.js:12:34)",
+              "Object.<anonymous> (/opt/learning/projen-example/lib/demo/typescript/typescript-stack.js:20:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1108:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1137:10)",
+              "Module.load (node:internal/modules/cjs/loader:988:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:828:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/TypescriptStack/KerKer/ApiGatewayPetStoreApi/Endpoint": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "KerKerApiGatewayPetStoreApiEndpoint5CB6686F",
+            "trace": [
+              "RestApi._configureDeployment (/opt/learning/projen-example/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:290:13)",
+              "new RestApi (/opt/learning/projen-example/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:419:14)",
+              "StateMachineApiGatewayExample._createRestApi (/opt/learning/projen-example/lib/statemachine-examples.js:35:33)",
+              "new StateMachineApiGatewayExample (/opt/learning/projen-example/lib/statemachine-examples.js:205:30)",
+              "new TypescriptStack (/opt/learning/projen-example/lib/demo/typescript/typescript-stack.js:12:34)",
+              "Object.<anonymous> (/opt/learning/projen-example/lib/demo/typescript/typescript-stack.js:20:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1108:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1137:10)",
+              "Module.load (node:internal/modules/cjs/loader:988:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:828:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/TypescriptStack/KerKer/ApiGatewayPetStoreApi/Default/pets/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "KerKerApiGatewayPetStoreApipetsD7F79E3C",
+            "trace": [
+              "new Resource (/opt/learning/projen-example/node_modules/@aws-cdk/aws-apigateway/lib/resource.js:231:26)",
+              "RootResource.addResource (/opt/learning/projen-example/node_modules/@aws-cdk/aws-apigateway/lib/resource.js:28:16)",
+              "StateMachineApiGatewayExample._createRestApi (/opt/learning/projen-example/lib/statemachine-examples.js:103:43)",
+              "new StateMachineApiGatewayExample (/opt/learning/projen-example/lib/statemachine-examples.js:205:30)",
+              "new TypescriptStack (/opt/learning/projen-example/lib/demo/typescript/typescript-stack.js:12:34)",
+              "Object.<anonymous> (/opt/learning/projen-example/lib/demo/typescript/typescript-stack.js:20:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1108:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1137:10)",
+              "Module.load (node:internal/modules/cjs/loader:988:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:828:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/TypescriptStack/KerKer/ApiGatewayPetStoreApi/Default/pets/GET/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "KerKerApiGatewayPetStoreApipetsGETF599B046",
+            "trace": [
+              "new Method (/opt/learning/projen-example/node_modules/@aws-cdk/aws-apigateway/lib/method.js:57:26)",
+              "Resource.addMethod (/opt/learning/projen-example/node_modules/@aws-cdk/aws-apigateway/lib/resource.js:36:16)",
+              "StateMachineApiGatewayExample._createRestApi (/opt/learning/projen-example/lib/statemachine-examples.js:106:18)",
+              "new StateMachineApiGatewayExample (/opt/learning/projen-example/lib/statemachine-examples.js:205:30)",
+              "new TypescriptStack (/opt/learning/projen-example/lib/demo/typescript/typescript-stack.js:12:34)",
+              "Object.<anonymous> (/opt/learning/projen-example/lib/demo/typescript/typescript-stack.js:20:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1108:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1137:10)",
+              "Module.load (node:internal/modules/cjs/loader:988:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:828:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/TypescriptStack/KerKer/ApiGatewayPetStoreApi/Default/pets/POST/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "KerKerApiGatewayPetStoreApipetsPOSTD706FE7E",
+            "trace": [
+              "new Method (/opt/learning/projen-example/node_modules/@aws-cdk/aws-apigateway/lib/method.js:57:26)",
+              "Resource.addMethod (/opt/learning/projen-example/node_modules/@aws-cdk/aws-apigateway/lib/resource.js:36:16)",
+              "StateMachineApiGatewayExample._createRestApi (/opt/learning/projen-example/lib/statemachine-examples.js:123:18)",
+              "new StateMachineApiGatewayExample (/opt/learning/projen-example/lib/statemachine-examples.js:205:30)",
+              "new TypescriptStack (/opt/learning/projen-example/lib/demo/typescript/typescript-stack.js:12:34)",
+              "Object.<anonymous> (/opt/learning/projen-example/lib/demo/typescript/typescript-stack.js:20:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1108:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1137:10)",
+              "Module.load (node:internal/modules/cjs/loader:988:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:828:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/TypescriptStack/KerKer/ApiGatewayPetStoreApi/Pet/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "KerKerApiGatewayPetStoreApiPet53F8F3D3",
+            "trace": [
+              "new Model (/opt/learning/projen-example/node_modules/@aws-cdk/aws-apigateway/lib/model.js:94:26)",
+              "RestApi.addModel (/opt/learning/projen-example/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:476:16)",
+              "StateMachineApiGatewayExample._createRestApi (/opt/learning/projen-example/lib/statemachine-examples.js:43:42)",
+              "new StateMachineApiGatewayExample (/opt/learning/projen-example/lib/statemachine-examples.js:205:30)",
+              "new TypescriptStack (/opt/learning/projen-example/lib/demo/typescript/typescript-stack.js:12:34)",
+              "Object.<anonymous> (/opt/learning/projen-example/lib/demo/typescript/typescript-stack.js:20:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1108:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1137:10)",
+              "Module.load (node:internal/modules/cjs/loader:988:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:828:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/TypescriptStack/KerKer/ApiGatewayPetStoreApi/PetType/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "KerKerApiGatewayPetStoreApiPetTypeF83A869B",
+            "trace": [
+              "new Model (/opt/learning/projen-example/node_modules/@aws-cdk/aws-apigateway/lib/model.js:94:26)",
+              "RestApi.addModel (/opt/learning/projen-example/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:476:16)",
+              "StateMachineApiGatewayExample._createRestApi (/opt/learning/projen-example/lib/statemachine-examples.js:57:46)",
+              "new StateMachineApiGatewayExample (/opt/learning/projen-example/lib/statemachine-examples.js:205:30)",
+              "new TypescriptStack (/opt/learning/projen-example/lib/demo/typescript/typescript-stack.js:12:34)",
+              "Object.<anonymous> (/opt/learning/projen-example/lib/demo/typescript/typescript-stack.js:20:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1108:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1137:10)",
+              "Module.load (node:internal/modules/cjs/loader:988:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:828:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/TypescriptStack/KerKer/ApiGatewayPetStoreApi/PetsModel/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "KerKerApiGatewayPetStoreApiPetsModel08B53F16",
+            "trace": [
+              "new Model (/opt/learning/projen-example/node_modules/@aws-cdk/aws-apigateway/lib/model.js:94:26)",
+              "RestApi.addModel (/opt/learning/projen-example/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:476:16)",
+              "StateMachineApiGatewayExample._createRestApi (/opt/learning/projen-example/lib/statemachine-examples.js:67:43)",
+              "new StateMachineApiGatewayExample (/opt/learning/projen-example/lib/statemachine-examples.js:205:30)",
+              "new TypescriptStack (/opt/learning/projen-example/lib/demo/typescript/typescript-stack.js:12:34)",
+              "Object.<anonymous> (/opt/learning/projen-example/lib/demo/typescript/typescript-stack.js:20:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1108:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1137:10)",
+              "Module.load (node:internal/modules/cjs/loader:988:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:828:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/TypescriptStack/KerKer/ApiGatewayPetStoreApi/NewPet/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "KerKerApiGatewayPetStoreApiNewPet026A479A",
+            "trace": [
+              "new Model (/opt/learning/projen-example/node_modules/@aws-cdk/aws-apigateway/lib/model.js:94:26)",
+              "RestApi.addModel (/opt/learning/projen-example/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:476:16)",
+              "StateMachineApiGatewayExample._createRestApi (/opt/learning/projen-example/lib/statemachine-examples.js:77:45)",
+              "new StateMachineApiGatewayExample (/opt/learning/projen-example/lib/statemachine-examples.js:205:30)",
+              "new TypescriptStack (/opt/learning/projen-example/lib/demo/typescript/typescript-stack.js:12:34)",
+              "Object.<anonymous> (/opt/learning/projen-example/lib/demo/typescript/typescript-stack.js:20:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1108:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1137:10)",
+              "Module.load (node:internal/modules/cjs/loader:988:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:828:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/TypescriptStack/KerKer/ApiGatewayPetStoreApi/NewPetResponse/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "KerKerApiGatewayPetStoreApiNewPetResponseF627B28A",
+            "trace": [
+              "new Model (/opt/learning/projen-example/node_modules/@aws-cdk/aws-apigateway/lib/model.js:94:26)",
+              "RestApi.addModel (/opt/learning/projen-example/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:476:16)",
+              "StateMachineApiGatewayExample._createRestApi (/opt/learning/projen-example/lib/statemachine-examples.js:90:53)",
+              "new StateMachineApiGatewayExample (/opt/learning/projen-example/lib/statemachine-examples.js:205:30)",
+              "new TypescriptStack (/opt/learning/projen-example/lib/demo/typescript/typescript-stack.js:12:34)",
+              "Object.<anonymous> (/opt/learning/projen-example/lib/demo/typescript/typescript-stack.js:20:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1108:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1137:10)",
+              "Module.load (node:internal/modules/cjs/loader:988:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:828:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/TypescriptStack/KerKer/StepFunctionExecutionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "KerKerStepFunctionExecutionRoleE8FEF4EC",
+            "trace": [
+              "new Role (/opt/learning/projen-example/node_modules/@aws-cdk/aws-iam/lib/role.js:72:22)",
+              "StateMachineApiGatewayExample._createWorkFlowRole (/opt/learning/projen-example/lib/statemachine-examples.js:150:43)",
+              "new StateMachineApiGatewayExample (/opt/learning/projen-example/lib/statemachine-examples.js:206:49)",
+              "new TypescriptStack (/opt/learning/projen-example/lib/demo/typescript/typescript-stack.js:12:34)",
+              "Object.<anonymous> (/opt/learning/projen-example/lib/demo/typescript/typescript-stack.js:20:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1108:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1137:10)",
+              "Module.load (node:internal/modules/cjs/loader:988:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:828:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/TypescriptStack/KerKer/StepFunctionExecutionRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "KerKerStepFunctionExecutionRoleDefaultPolicy827D55A3",
+            "trace": [
+              "new Policy (/opt/learning/projen-example/node_modules/@aws-cdk/aws-iam/lib/policy.js:56:26)",
+              "Role.addToPrincipalPolicy (/opt/learning/projen-example/node_modules/@aws-cdk/aws-iam/lib/role.js:205:34)",
+              "Role.addToPolicy (/opt/learning/projen-example/node_modules/@aws-cdk/aws-iam/lib/role.js:217:21)",
+              "StateMachineApiGatewayExample._createWorkFlowRole (/opt/learning/projen-example/lib/statemachine-examples.js:155:35)",
+              "new StateMachineApiGatewayExample (/opt/learning/projen-example/lib/statemachine-examples.js:206:49)",
+              "new TypescriptStack (/opt/learning/projen-example/lib/demo/typescript/typescript-stack.js:12:34)",
+              "Object.<anonymous> (/opt/learning/projen-example/lib/demo/typescript/typescript-stack.js:20:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1108:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1137:10)",
+              "Module.load (node:internal/modules/cjs/loader:988:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:828:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/TypescriptStack/KerKer/StateMachine/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "KerKerStateMachine5B14D4C0",
+            "trace": [
+              "new StateMachine (/opt/learning/projen-example/node_modules/@aws-cdk/aws-stepfunctions/lib/state-machine.js:274:26)",
+              "StateMachineApiGatewayExample._createStateMachine (/opt/learning/projen-example/lib/statemachine-examples.js:199:34)",
+              "new StateMachineApiGatewayExample (/opt/learning/projen-example/lib/statemachine-examples.js:213:34)",
+              "new TypescriptStack (/opt/learning/projen-example/lib/demo/typescript/typescript-stack.js:12:34)",
+              "Object.<anonymous> (/opt/learning/projen-example/lib/demo/typescript/typescript-stack.js:20:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1108:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1137:10)",
+              "Module.load (node:internal/modules/cjs/loader:988:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:828:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/TypescriptStack/OStateMachine": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "OStateMachine",
+            "trace": [
+              "new TypescriptStack (/opt/learning/projen-example/lib/demo/typescript/typescript-stack.js:15:9)",
+              "Object.<anonymous> (/opt/learning/projen-example/lib/demo/typescript/typescript-stack.js:20:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1108:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1137:10)",
+              "Module.load (node:internal/modules/cjs/loader:988:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:828:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/TypescriptStack/OExecutionOutput": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "OExecutionOutput",
+            "trace": [
+              "new TypescriptStack (/opt/learning/projen-example/lib/demo/typescript/typescript-stack.js:16:9)",
+              "Object.<anonymous> (/opt/learning/projen-example/lib/demo/typescript/typescript-stack.js:20:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1108:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1137:10)",
+              "Module.load (node:internal/modules/cjs/loader:988:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:828:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/TypescriptStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata",
+            "trace": [
+              "new MetadataResource (/opt/learning/projen-example/node_modules/@aws-cdk/core/lib/private/metadata-resource.js:22:30)",
+              "/opt/learning/projen-example/node_modules/@aws-cdk/core/lib/private/synthesis.js:128:9",
+              "visit (/opt/learning/projen-example/node_modules/@aws-cdk/core/lib/private/synthesis.js:185:9)",
+              "visit (/opt/learning/projen-example/node_modules/@aws-cdk/core/lib/private/synthesis.js:182:9)",
+              "injectMetadataResources (/opt/learning/projen-example/node_modules/@aws-cdk/core/lib/private/synthesis.js:117:5)",
+              "Object.synthesize (/opt/learning/projen-example/node_modules/@aws-cdk/core/lib/private/synthesis.js:17:5)",
+              "App.synth (/opt/learning/projen-example/node_modules/@aws-cdk/core/lib/stage.js:100:41)",
+              "process.<anonymous> (/opt/learning/projen-example/node_modules/@aws-cdk/core/lib/app.js:50:51)",
+              "Object.onceWrapper (node:events:472:26)",
+              "process.emit (node:events:365:28)"
+            ]
+          }
+        ],
+        "/TypescriptStack/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable",
+            "trace": [
+              "new MetadataResource (/opt/learning/projen-example/node_modules/@aws-cdk/core/lib/private/metadata-resource.js:30:35)",
+              "/opt/learning/projen-example/node_modules/@aws-cdk/core/lib/private/synthesis.js:128:9",
+              "visit (/opt/learning/projen-example/node_modules/@aws-cdk/core/lib/private/synthesis.js:185:9)",
+              "visit (/opt/learning/projen-example/node_modules/@aws-cdk/core/lib/private/synthesis.js:182:9)",
+              "injectMetadataResources (/opt/learning/projen-example/node_modules/@aws-cdk/core/lib/private/synthesis.js:117:5)",
+              "Object.synthesize (/opt/learning/projen-example/node_modules/@aws-cdk/core/lib/private/synthesis.js:17:5)",
+              "App.synth (/opt/learning/projen-example/node_modules/@aws-cdk/core/lib/stage.js:100:41)",
+              "process.<anonymous> (/opt/learning/projen-example/node_modules/@aws-cdk/core/lib/app.js:50:51)",
+              "Object.onceWrapper (node:events:472:26)",
+              "process.emit (node:events:365:28)"
+            ]
+          }
+        ]
+      },
+      "displayName": "TypescriptStack"
+    }
+  }
+}
