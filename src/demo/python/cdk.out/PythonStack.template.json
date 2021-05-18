@@ -1,0 +1,857 @@
+{
+  "Resources": {
+    "KerKerApiGatewayPetStoreApi9BA24AA9": {
+      "Type": "AWS::ApiGateway::RestApi",
+      "Properties": {
+        "Description": "Your first API with Amazon API Gateway. This is a sample API that integrates via HTTP with our demo Pet Store endpoints.",
+        "EndpointConfiguration": {
+          "Types": [
+            "REGIONAL"
+          ]
+        },
+        "Name": "PetStore"
+      },
+      "Metadata": {
+        "aws:cdk:path": "PythonStack/KerKer/ApiGatewayPetStoreApi/Resource"
+      }
+    },
+    "KerKerApiGatewayPetStoreApiCloudWatchRoleEC1F55E0": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "apigateway.amazonaws.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":iam::aws:policy/service-role/AmazonAPIGatewayPushToCloudWatchLogs"
+              ]
+            ]
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "PythonStack/KerKer/ApiGatewayPetStoreApi/CloudWatchRole/Resource"
+      }
+    },
+    "KerKerApiGatewayPetStoreApiAccount7D8F014C": {
+      "Type": "AWS::ApiGateway::Account",
+      "Properties": {
+        "CloudWatchRoleArn": {
+          "Fn::GetAtt": [
+            "KerKerApiGatewayPetStoreApiCloudWatchRoleEC1F55E0",
+            "Arn"
+          ]
+        }
+      },
+      "DependsOn": [
+        "KerKerApiGatewayPetStoreApi9BA24AA9"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "PythonStack/KerKer/ApiGatewayPetStoreApi/Account"
+      }
+    },
+    "KerKerApiGatewayPetStoreApiDeployment5EC0C452781f945d68ad51ff12a7d5f5e9a2f234": {
+      "Type": "AWS::ApiGateway::Deployment",
+      "Properties": {
+        "RestApiId": {
+          "Ref": "KerKerApiGatewayPetStoreApi9BA24AA9"
+        },
+        "Description": "Automatically created by the RestApi construct"
+      },
+      "DependsOn": [
+        "KerKerApiGatewayPetStoreApipetsGETF599B046",
+        "KerKerApiGatewayPetStoreApipetsPOSTD706FE7E",
+        "KerKerApiGatewayPetStoreApipetsD7F79E3C",
+        "KerKerApiGatewayPetStoreApiNewPet026A479A",
+        "KerKerApiGatewayPetStoreApiNewPetResponseF627B28A",
+        "KerKerApiGatewayPetStoreApiPet53F8F3D3",
+        "KerKerApiGatewayPetStoreApiPetsModel08B53F16",
+        "KerKerApiGatewayPetStoreApiPetTypeF83A869B"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "PythonStack/KerKer/ApiGatewayPetStoreApi/Deployment/Resource"
+      }
+    },
+    "KerKerApiGatewayPetStoreApiDeploymentStagedefaultCE3D7C35": {
+      "Type": "AWS::ApiGateway::Stage",
+      "Properties": {
+        "RestApiId": {
+          "Ref": "KerKerApiGatewayPetStoreApi9BA24AA9"
+        },
+        "DeploymentId": {
+          "Ref": "KerKerApiGatewayPetStoreApiDeployment5EC0C452781f945d68ad51ff12a7d5f5e9a2f234"
+        },
+        "StageName": "default"
+      },
+      "Metadata": {
+        "aws:cdk:path": "PythonStack/KerKer/ApiGatewayPetStoreApi/DeploymentStage.default/Resource"
+      }
+    },
+    "KerKerApiGatewayPetStoreApipetsD7F79E3C": {
+      "Type": "AWS::ApiGateway::Resource",
+      "Properties": {
+        "ParentId": {
+          "Fn::GetAtt": [
+            "KerKerApiGatewayPetStoreApi9BA24AA9",
+            "RootResourceId"
+          ]
+        },
+        "PathPart": "pets",
+        "RestApiId": {
+          "Ref": "KerKerApiGatewayPetStoreApi9BA24AA9"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "PythonStack/KerKer/ApiGatewayPetStoreApi/Default/pets/Resource"
+      }
+    },
+    "KerKerApiGatewayPetStoreApipetsGETF599B046": {
+      "Type": "AWS::ApiGateway::Method",
+      "Properties": {
+        "HttpMethod": "GET",
+        "ResourceId": {
+          "Ref": "KerKerApiGatewayPetStoreApipetsD7F79E3C"
+        },
+        "RestApiId": {
+          "Ref": "KerKerApiGatewayPetStoreApi9BA24AA9"
+        },
+        "AuthorizationType": "AWS_IAM",
+        "Integration": {
+          "IntegrationHttpMethod": "GET",
+          "IntegrationResponses": [
+            {
+              "StatusCode": "200"
+            }
+          ],
+          "PassthroughBehavior": "WHEN_NO_MATCH",
+          "Type": "HTTP",
+          "Uri": {
+            "Fn::Join": [
+              "",
+              [
+                "http://petstore.execute-api.",
+                {
+                  "Ref": "AWS::Region"
+                },
+                ".amazonaws.com/petstore/pets"
+              ]
+            ]
+          }
+        },
+        "MethodResponses": [
+          {
+            "ResponseModels": {
+              "application/json": {
+                "Ref": "KerKerApiGatewayPetStoreApiPetsModel08B53F16"
+              }
+            },
+            "StatusCode": "200"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "PythonStack/KerKer/ApiGatewayPetStoreApi/Default/pets/GET/Resource"
+      }
+    },
+    "KerKerApiGatewayPetStoreApipetsPOSTD706FE7E": {
+      "Type": "AWS::ApiGateway::Method",
+      "Properties": {
+        "HttpMethod": "POST",
+        "ResourceId": {
+          "Ref": "KerKerApiGatewayPetStoreApipetsD7F79E3C"
+        },
+        "RestApiId": {
+          "Ref": "KerKerApiGatewayPetStoreApi9BA24AA9"
+        },
+        "AuthorizationType": "AWS_IAM",
+        "Integration": {
+          "IntegrationHttpMethod": "POST",
+          "IntegrationResponses": [
+            {
+              "StatusCode": "200"
+            }
+          ],
+          "PassthroughBehavior": "WHEN_NO_MATCH",
+          "Type": "HTTP",
+          "Uri": {
+            "Fn::Join": [
+              "",
+              [
+                "http://petstore.execute-api.",
+                {
+                  "Ref": "AWS::Region"
+                },
+                ".amazonaws.com/petstore/pets"
+              ]
+            ]
+          }
+        },
+        "MethodResponses": [
+          {
+            "ResponseModels": {
+              "application/json": {
+                "Ref": "KerKerApiGatewayPetStoreApiNewPetResponseF627B28A"
+              }
+            },
+            "StatusCode": "200"
+          }
+        ],
+        "RequestModels": {
+          "application/json": {
+            "Ref": "KerKerApiGatewayPetStoreApiNewPet026A479A"
+          }
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "PythonStack/KerKer/ApiGatewayPetStoreApi/Default/pets/POST/Resource"
+      }
+    },
+    "KerKerApiGatewayPetStoreApiPet53F8F3D3": {
+      "Type": "AWS::ApiGateway::Model",
+      "Properties": {
+        "RestApiId": {
+          "Ref": "KerKerApiGatewayPetStoreApi9BA24AA9"
+        },
+        "ContentType": "application/json",
+        "Name": "Pet",
+        "Schema": {
+          "$schema": "http://json-schema.org/draft-04/schema#",
+          "title": "Pet Mdoel",
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "type": {
+              "type": "string"
+            },
+            "price": {
+              "type": "number"
+            }
+          }
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "PythonStack/KerKer/ApiGatewayPetStoreApi/Pet/Resource"
+      }
+    },
+    "KerKerApiGatewayPetStoreApiPetTypeF83A869B": {
+      "Type": "AWS::ApiGateway::Model",
+      "Properties": {
+        "RestApiId": {
+          "Ref": "KerKerApiGatewayPetStoreApi9BA24AA9"
+        },
+        "ContentType": "application/json",
+        "Name": "PetType",
+        "Schema": {
+          "$schema": "http://json-schema.org/draft-04/schema#",
+          "title": "Pet Type",
+          "type": "string",
+          "enum": [
+            "dog",
+            "cat",
+            "fish",
+            "bird",
+            "gecko"
+          ]
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "PythonStack/KerKer/ApiGatewayPetStoreApi/PetType/Resource"
+      }
+    },
+    "KerKerApiGatewayPetStoreApiPetsModel08B53F16": {
+      "Type": "AWS::ApiGateway::Model",
+      "Properties": {
+        "RestApiId": {
+          "Ref": "KerKerApiGatewayPetStoreApi9BA24AA9"
+        },
+        "ContentType": "application/json",
+        "Name": "Pets",
+        "Schema": {
+          "$schema": "http://json-schema.org/draft-04/schema#",
+          "title": "Pets",
+          "type": "array",
+          "items": {
+            "$ref": {
+              "Fn::Join": [
+                "",
+                [
+                  "https://apigateway.amazonaws.com/restapis/",
+                  {
+                    "Ref": "KerKerApiGatewayPetStoreApi9BA24AA9"
+                  },
+                  "/models/",
+                  {
+                    "Ref": "KerKerApiGatewayPetStoreApiPet53F8F3D3"
+                  }
+                ]
+              ]
+            }
+          }
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "PythonStack/KerKer/ApiGatewayPetStoreApi/PetsModel/Resource"
+      }
+    },
+    "KerKerApiGatewayPetStoreApiNewPet026A479A": {
+      "Type": "AWS::ApiGateway::Model",
+      "Properties": {
+        "RestApiId": {
+          "Ref": "KerKerApiGatewayPetStoreApi9BA24AA9"
+        },
+        "ContentType": "application/json",
+        "Name": "NewPet",
+        "Schema": {
+          "$schema": "http://json-schema.org/draft-04/schema#",
+          "title": "New Pet",
+          "type": "object",
+          "properties": {
+            "type": {
+              "$ref": {
+                "Fn::Join": [
+                  "",
+                  [
+                    "https://apigateway.amazonaws.com/restapis/",
+                    {
+                      "Ref": "KerKerApiGatewayPetStoreApi9BA24AA9"
+                    },
+                    "/models/",
+                    {
+                      "Ref": "KerKerApiGatewayPetStoreApiPetTypeF83A869B"
+                    }
+                  ]
+                ]
+              }
+            },
+            "price": {
+              "type": "number"
+            }
+          }
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "PythonStack/KerKer/ApiGatewayPetStoreApi/NewPet/Resource"
+      }
+    },
+    "KerKerApiGatewayPetStoreApiNewPetResponseF627B28A": {
+      "Type": "AWS::ApiGateway::Model",
+      "Properties": {
+        "RestApiId": {
+          "Ref": "KerKerApiGatewayPetStoreApi9BA24AA9"
+        },
+        "ContentType": "application/json",
+        "Name": "NewPetResponse",
+        "Schema": {
+          "$schema": "http://json-schema.org/draft-04/schema#",
+          "title": "New Pet Response",
+          "type": "object",
+          "properties": {
+            "pet": {
+              "$ref": {
+                "Fn::Join": [
+                  "",
+                  [
+                    "https://apigateway.amazonaws.com/restapis/",
+                    {
+                      "Ref": "KerKerApiGatewayPetStoreApi9BA24AA9"
+                    },
+                    "/models/",
+                    {
+                      "Ref": "KerKerApiGatewayPetStoreApiPet53F8F3D3"
+                    }
+                  ]
+                ]
+              }
+            },
+            "message": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "PythonStack/KerKer/ApiGatewayPetStoreApi/NewPetResponse/Resource"
+      }
+    },
+    "KerKerStepFunctionExecutionRoleE8FEF4EC": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": {
+                  "Fn::Join": [
+                    "",
+                    [
+                      "states.",
+                      {
+                        "Ref": "AWS::Region"
+                      },
+                      ".amazonaws.com"
+                    ]
+                  ]
+                }
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "Description": "Execute a workflow related to API Gateway."
+      },
+      "Metadata": {
+        "aws:cdk:path": "PythonStack/KerKer/StepFunctionExecutionRole/Resource"
+      }
+    },
+    "KerKerStepFunctionExecutionRoleDefaultPolicy827D55A3": {
+      "Type": "AWS::IAM::Policy",
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": "execute-api:Invoke",
+              "Effect": "Allow",
+              "Resource": [
+                {
+                  "Fn::Join": [
+                    "",
+                    [
+                      "arn:",
+                      {
+                        "Ref": "AWS::Partition"
+                      },
+                      ":execute-api:",
+                      {
+                        "Ref": "AWS::Region"
+                      },
+                      ":",
+                      {
+                        "Ref": "AWS::AccountId"
+                      },
+                      ":",
+                      {
+                        "Ref": "KerKerApiGatewayPetStoreApi9BA24AA9"
+                      },
+                      "/default/GET/pets"
+                    ]
+                  ]
+                },
+                {
+                  "Fn::Join": [
+                    "",
+                    [
+                      "arn:",
+                      {
+                        "Ref": "AWS::Partition"
+                      },
+                      ":execute-api:",
+                      {
+                        "Ref": "AWS::Region"
+                      },
+                      ":",
+                      {
+                        "Ref": "AWS::AccountId"
+                      },
+                      ":",
+                      {
+                        "Ref": "KerKerApiGatewayPetStoreApi9BA24AA9"
+                      },
+                      "/default/POST/pets"
+                    ]
+                  ]
+                }
+              ],
+              "Sid": "ApiGatewayExecutionPermissions"
+            },
+            {
+              "Action": "execute-api:Invoke",
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::Join": [
+                  "",
+                  [
+                    "arn:",
+                    {
+                      "Ref": "AWS::Partition"
+                    },
+                    ":execute-api:",
+                    {
+                      "Ref": "AWS::Region"
+                    },
+                    ":",
+                    {
+                      "Ref": "AWS::AccountId"
+                    },
+                    ":",
+                    {
+                      "Ref": "KerKerApiGatewayPetStoreApi9BA24AA9"
+                    },
+                    "/default/POST/pets"
+                  ]
+                ]
+              }
+            },
+            {
+              "Action": "execute-api:Invoke",
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::Join": [
+                  "",
+                  [
+                    "arn:",
+                    {
+                      "Ref": "AWS::Partition"
+                    },
+                    ":execute-api:",
+                    {
+                      "Ref": "AWS::Region"
+                    },
+                    ":",
+                    {
+                      "Ref": "AWS::AccountId"
+                    },
+                    ":",
+                    {
+                      "Ref": "KerKerApiGatewayPetStoreApi9BA24AA9"
+                    },
+                    "/default/GET/pets"
+                  ]
+                ]
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "PolicyName": "KerKerStepFunctionExecutionRoleDefaultPolicy827D55A3",
+        "Roles": [
+          {
+            "Ref": "KerKerStepFunctionExecutionRoleE8FEF4EC"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "PythonStack/KerKer/StepFunctionExecutionRole/DefaultPolicy/Resource"
+      }
+    },
+    "KerKerStateMachine5B14D4C0": {
+      "Type": "AWS::StepFunctions::StateMachine",
+      "Properties": {
+        "RoleArn": {
+          "Fn::GetAtt": [
+            "KerKerStepFunctionExecutionRoleE8FEF4EC",
+            "Arn"
+          ]
+        },
+        "DefinitionString": {
+          "Fn::Join": [
+            "",
+            [
+              "{\"StartAt\":\"Add Pet to Store\",\"States\":{\"Add Pet to Store\":{\"Next\":\"Pet was Added Successfully?\",\"Type\":\"Task\",\"Resource\":\"arn:",
+              {
+                "Ref": "AWS::Partition"
+              },
+              ":states:::apigateway:invoke\",\"Parameters\":{\"ApiEndpoint\":\"",
+              {
+                "Ref": "KerKerApiGatewayPetStoreApi9BA24AA9"
+              },
+              ".execute-api.",
+              {
+                "Ref": "AWS::Region"
+              },
+              ".",
+              {
+                "Ref": "AWS::URLSuffix"
+              },
+              "\",\"Method\":\"POST\",\"Stage\":\"default\",\"Path\":\"/pets\",\"RequestBody\":\"$.NewPet\",\"AuthType\":\"IAM_ROLE\"},\"ResultSelector\":{\"ResponseBody.$\":\"$.ResponseBody\"}},\"Pet was Added Successfully?\":{\"Type\":\"Choice\",\"Choices\":[{\"Variable\":\"$.ResponseBody.errors\",\"IsPresent\":true,\"Next\":\"Failure\"}],\"Default\":\"Retrieve Pet Store Data\"},\"Retrieve Pet Store Data\":{\"End\":true,\"Type\":\"Task\",\"ResultPath\":\"$.ExistingPets\",\"Resource\":\"arn:",
+              {
+                "Ref": "AWS::Partition"
+              },
+              ":states:::apigateway:invoke\",\"Parameters\":{\"ApiEndpoint\":\"",
+              {
+                "Ref": "KerKerApiGatewayPetStoreApi9BA24AA9"
+              },
+              ".execute-api.",
+              {
+                "Ref": "AWS::Region"
+              },
+              ".",
+              {
+                "Ref": "AWS::URLSuffix"
+              },
+              "\",\"Method\":\"GET\",\"Stage\":\"default\",\"Path\":\"/pets\",\"AuthType\":\"IAM_ROLE\"},\"ResultSelector\":{\"Pets.$\":\"$.ResponseBody\"}},\"Failure\":{\"Type\":\"Fail\"}}}"
+            ]
+          ]
+        }
+      },
+      "DependsOn": [
+        "KerKerStepFunctionExecutionRoleDefaultPolicy827D55A3",
+        "KerKerStepFunctionExecutionRoleE8FEF4EC"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "PythonStack/KerKer/StateMachine/Resource"
+      }
+    },
+    "CDKMetadata": {
+      "Type": "AWS::CDK::Metadata",
+      "Properties": {
+        "Analytics": "v2:deflate64:H4sIAAAAAAAAE1WQy27DIBBFvyV7TBK1i3bX1H2srEbpFyBM4okxg8ygyLL49w5+tM2Kewdm5lz2cr97lLvNi7qFQtftdtTYGzl+k9KtKM/uK5KPJEp0gfqoKddOJmDstcmaL2ogQJdEHjEqDxdF5qYGOfI7OnhYWlZ50BqjI/FmvMWhM26a+c/x7ss0exbrtlcV/swdRmWowTqXFlVhbezks0gCVMc0aOe2fB7Rgh6ynVUSgYw/R6dzllCQCm2QpbKWqT/nQEuGd1d7BOa865DjhwLe2SAwEZOTqZRuwK1Jfn1KSRwH5nTbB/kknzfXAFD0/CXQGXmazx9211ZVmAEAAA=="
+      },
+      "Metadata": {
+        "aws:cdk:path": "PythonStack/CDKMetadata/Default"
+      },
+      "Condition": "CDKMetadataAvailable"
+    }
+  },
+  "Outputs": {
+    "KerKerApiGatewayPetStoreApiEndpoint5CB6686F": {
+      "Value": {
+        "Fn::Join": [
+          "",
+          [
+            "https://",
+            {
+              "Ref": "KerKerApiGatewayPetStoreApi9BA24AA9"
+            },
+            ".execute-api.",
+            {
+              "Ref": "AWS::Region"
+            },
+            ".",
+            {
+              "Ref": "AWS::URLSuffix"
+            },
+            "/",
+            {
+              "Ref": "KerKerApiGatewayPetStoreApiDeploymentStagedefaultCE3D7C35"
+            },
+            "/"
+          ]
+        ]
+      }
+    },
+    "OStateMachine": {
+      "Value": {
+        "Ref": "KerKerStateMachine5B14D4C0"
+      }
+    },
+    "OExecutionOutput": {
+      "Description": "Sample input to StartExecution.",
+      "Value": "{\"NewPet\":{\"type\":\"turtle\",\"price\":74.99}}"
+    }
+  },
+  "Conditions": {
+    "CDKMetadataAvailable": {
+      "Fn::Or": [
+        {
+          "Fn::Or": [
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "af-south-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "ap-east-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "ap-northeast-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "ap-northeast-2"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "ap-south-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "ap-southeast-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "ap-southeast-2"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "ca-central-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "cn-north-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "cn-northwest-1"
+              ]
+            }
+          ]
+        },
+        {
+          "Fn::Or": [
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "eu-central-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "eu-north-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "eu-south-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "eu-west-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "eu-west-2"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "eu-west-3"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "me-south-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "sa-east-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "us-east-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "us-east-2"
+              ]
+            }
+          ]
+        },
+        {
+          "Fn::Or": [
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "us-west-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "us-west-2"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

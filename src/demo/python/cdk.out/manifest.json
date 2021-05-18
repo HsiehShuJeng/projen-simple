@@ -1,0 +1,443 @@
+{
+  "version": "11.0.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "PythonStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "PythonStack.template.json",
+        "validateOnSynth": false
+      },
+      "metadata": {
+        "/PythonStack/KerKer/ApiGatewayPetStoreApi/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "KerKerApiGatewayPetStoreApi9BA24AA9",
+            "trace": [
+              "new RestApi (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/jsii-kernel-Y08ME4/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:401:26)",
+              "StateMachineApiGatewayExample._createRestApi (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/jsii-kernel-Y08ME4/node_modules/projen-statemachine-example/lib/statemachine-examples.js:35:33)",
+              "new StateMachineApiGatewayExample (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/jsii-kernel-Y08ME4/node_modules/projen-statemachine-example/lib/statemachine-examples.js:205:30)",
+              "/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:8154:58",
+              "Kernel._wrapSandboxCode (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:8582:24)",
+              "Kernel._create (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:8154:34)",
+              "Kernel.create (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:7895:29)",
+              "KernelHost.processRequest (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:9479:36)",
+              "KernelHost.run (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:9442:22)",
+              "Immediate._onImmediate (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:9443:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/PythonStack/KerKer/ApiGatewayPetStoreApi/CloudWatchRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "KerKerApiGatewayPetStoreApiCloudWatchRoleEC1F55E0",
+            "trace": [
+              "new Role (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/jsii-kernel-Y08ME4/node_modules/@aws-cdk/aws-iam/lib/role.js:72:22)",
+              "RestApi._configureCloudWatchRole (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/jsii-kernel-Y08ME4/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:250:22)",
+              "new RestApi (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/jsii-kernel-Y08ME4/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:417:18)",
+              "StateMachineApiGatewayExample._createRestApi (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/jsii-kernel-Y08ME4/node_modules/projen-statemachine-example/lib/statemachine-examples.js:35:33)",
+              "new StateMachineApiGatewayExample (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/jsii-kernel-Y08ME4/node_modules/projen-statemachine-example/lib/statemachine-examples.js:205:30)",
+              "/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:8154:58",
+              "Kernel._wrapSandboxCode (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:8582:24)",
+              "Kernel._create (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:8154:34)",
+              "Kernel.create (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:7895:29)",
+              "KernelHost.processRequest (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:9479:36)",
+              "KernelHost.run (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:9442:22)",
+              "Immediate._onImmediate (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:9443:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/PythonStack/KerKer/ApiGatewayPetStoreApi/Account": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "KerKerApiGatewayPetStoreApiAccount7D8F014C",
+            "trace": [
+              "RestApi._configureCloudWatchRole (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/jsii-kernel-Y08ME4/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:254:26)",
+              "new RestApi (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/jsii-kernel-Y08ME4/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:417:18)",
+              "StateMachineApiGatewayExample._createRestApi (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/jsii-kernel-Y08ME4/node_modules/projen-statemachine-example/lib/statemachine-examples.js:35:33)",
+              "new StateMachineApiGatewayExample (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/jsii-kernel-Y08ME4/node_modules/projen-statemachine-example/lib/statemachine-examples.js:205:30)",
+              "/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:8154:58",
+              "Kernel._wrapSandboxCode (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:8582:24)",
+              "Kernel._create (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:8154:34)",
+              "Kernel.create (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:7895:29)",
+              "KernelHost.processRequest (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:9479:36)",
+              "KernelHost.run (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:9442:22)",
+              "Immediate._onImmediate (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:9443:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/PythonStack/KerKer/ApiGatewayPetStoreApi/Deployment/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "KerKerApiGatewayPetStoreApiDeployment5EC0C452781f945d68ad51ff12a7d5f5e9a2f234",
+            "trace": [
+              "new Deployment (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/jsii-kernel-Y08ME4/node_modules/@aws-cdk/aws-apigateway/lib/deployment.js:48:25)",
+              "RestApi._configureDeployment (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/jsii-kernel-Y08ME4/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:278:38)",
+              "new RestApi (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/jsii-kernel-Y08ME4/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:419:14)",
+              "StateMachineApiGatewayExample._createRestApi (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/jsii-kernel-Y08ME4/node_modules/projen-statemachine-example/lib/statemachine-examples.js:35:33)",
+              "new StateMachineApiGatewayExample (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/jsii-kernel-Y08ME4/node_modules/projen-statemachine-example/lib/statemachine-examples.js:205:30)",
+              "/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:8154:58",
+              "Kernel._wrapSandboxCode (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:8582:24)",
+              "Kernel._create (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:8154:34)",
+              "Kernel.create (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:7895:29)",
+              "KernelHost.processRequest (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:9479:36)",
+              "KernelHost.run (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:9442:22)",
+              "Immediate._onImmediate (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:9443:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/PythonStack/KerKer/ApiGatewayPetStoreApi/DeploymentStage.default/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "KerKerApiGatewayPetStoreApiDeploymentStagedefaultCE3D7C35",
+            "trace": [
+              "new Stage (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/jsii-kernel-Y08ME4/node_modules/@aws-cdk/aws-apigateway/lib/stage.js:61:26)",
+              "RestApi._configureDeployment (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/jsii-kernel-Y08ME4/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:286:36)",
+              "new RestApi (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/jsii-kernel-Y08ME4/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:419:14)",
+              "StateMachineApiGatewayExample._createRestApi (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/jsii-kernel-Y08ME4/node_modules/projen-statemachine-example/lib/statemachine-examples.js:35:33)",
+              "new StateMachineApiGatewayExample (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/jsii-kernel-Y08ME4/node_modules/projen-statemachine-example/lib/statemachine-examples.js:205:30)",
+              "/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:8154:58",
+              "Kernel._wrapSandboxCode (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:8582:24)",
+              "Kernel._create (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:8154:34)",
+              "Kernel.create (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:7895:29)",
+              "KernelHost.processRequest (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:9479:36)",
+              "KernelHost.run (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:9442:22)",
+              "Immediate._onImmediate (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:9443:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/PythonStack/KerKer/ApiGatewayPetStoreApi/Endpoint": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "KerKerApiGatewayPetStoreApiEndpoint5CB6686F",
+            "trace": [
+              "RestApi._configureDeployment (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/jsii-kernel-Y08ME4/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:290:13)",
+              "new RestApi (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/jsii-kernel-Y08ME4/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:419:14)",
+              "StateMachineApiGatewayExample._createRestApi (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/jsii-kernel-Y08ME4/node_modules/projen-statemachine-example/lib/statemachine-examples.js:35:33)",
+              "new StateMachineApiGatewayExample (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/jsii-kernel-Y08ME4/node_modules/projen-statemachine-example/lib/statemachine-examples.js:205:30)",
+              "/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:8154:58",
+              "Kernel._wrapSandboxCode (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:8582:24)",
+              "Kernel._create (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:8154:34)",
+              "Kernel.create (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:7895:29)",
+              "KernelHost.processRequest (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:9479:36)",
+              "KernelHost.run (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:9442:22)",
+              "Immediate._onImmediate (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:9443:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/PythonStack/KerKer/ApiGatewayPetStoreApi/Default/pets/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "KerKerApiGatewayPetStoreApipetsD7F79E3C",
+            "trace": [
+              "new Resource (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/jsii-kernel-Y08ME4/node_modules/@aws-cdk/aws-apigateway/lib/resource.js:231:26)",
+              "RootResource.addResource (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/jsii-kernel-Y08ME4/node_modules/@aws-cdk/aws-apigateway/lib/resource.js:28:16)",
+              "StateMachineApiGatewayExample._createRestApi (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/jsii-kernel-Y08ME4/node_modules/projen-statemachine-example/lib/statemachine-examples.js:103:43)",
+              "new StateMachineApiGatewayExample (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/jsii-kernel-Y08ME4/node_modules/projen-statemachine-example/lib/statemachine-examples.js:205:30)",
+              "/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:8154:58",
+              "Kernel._wrapSandboxCode (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:8582:24)",
+              "Kernel._create (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:8154:34)",
+              "Kernel.create (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:7895:29)",
+              "KernelHost.processRequest (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:9479:36)",
+              "KernelHost.run (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:9442:22)",
+              "Immediate._onImmediate (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:9443:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/PythonStack/KerKer/ApiGatewayPetStoreApi/Default/pets/GET/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "KerKerApiGatewayPetStoreApipetsGETF599B046",
+            "trace": [
+              "new Method (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/jsii-kernel-Y08ME4/node_modules/@aws-cdk/aws-apigateway/lib/method.js:57:26)",
+              "Resource.addMethod (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/jsii-kernel-Y08ME4/node_modules/@aws-cdk/aws-apigateway/lib/resource.js:36:16)",
+              "StateMachineApiGatewayExample._createRestApi (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/jsii-kernel-Y08ME4/node_modules/projen-statemachine-example/lib/statemachine-examples.js:106:18)",
+              "new StateMachineApiGatewayExample (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/jsii-kernel-Y08ME4/node_modules/projen-statemachine-example/lib/statemachine-examples.js:205:30)",
+              "/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:8154:58",
+              "Kernel._wrapSandboxCode (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:8582:24)",
+              "Kernel._create (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:8154:34)",
+              "Kernel.create (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:7895:29)",
+              "KernelHost.processRequest (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:9479:36)",
+              "KernelHost.run (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:9442:22)",
+              "Immediate._onImmediate (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:9443:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/PythonStack/KerKer/ApiGatewayPetStoreApi/Default/pets/POST/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "KerKerApiGatewayPetStoreApipetsPOSTD706FE7E",
+            "trace": [
+              "new Method (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/jsii-kernel-Y08ME4/node_modules/@aws-cdk/aws-apigateway/lib/method.js:57:26)",
+              "Resource.addMethod (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/jsii-kernel-Y08ME4/node_modules/@aws-cdk/aws-apigateway/lib/resource.js:36:16)",
+              "StateMachineApiGatewayExample._createRestApi (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/jsii-kernel-Y08ME4/node_modules/projen-statemachine-example/lib/statemachine-examples.js:123:18)",
+              "new StateMachineApiGatewayExample (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/jsii-kernel-Y08ME4/node_modules/projen-statemachine-example/lib/statemachine-examples.js:205:30)",
+              "/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:8154:58",
+              "Kernel._wrapSandboxCode (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:8582:24)",
+              "Kernel._create (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:8154:34)",
+              "Kernel.create (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:7895:29)",
+              "KernelHost.processRequest (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:9479:36)",
+              "KernelHost.run (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:9442:22)",
+              "Immediate._onImmediate (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:9443:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/PythonStack/KerKer/ApiGatewayPetStoreApi/Pet/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "KerKerApiGatewayPetStoreApiPet53F8F3D3",
+            "trace": [
+              "new Model (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/jsii-kernel-Y08ME4/node_modules/@aws-cdk/aws-apigateway/lib/model.js:94:26)",
+              "RestApi.addModel (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/jsii-kernel-Y08ME4/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:476:16)",
+              "StateMachineApiGatewayExample._createRestApi (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/jsii-kernel-Y08ME4/node_modules/projen-statemachine-example/lib/statemachine-examples.js:43:42)",
+              "new StateMachineApiGatewayExample (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/jsii-kernel-Y08ME4/node_modules/projen-statemachine-example/lib/statemachine-examples.js:205:30)",
+              "/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:8154:58",
+              "Kernel._wrapSandboxCode (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:8582:24)",
+              "Kernel._create (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:8154:34)",
+              "Kernel.create (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:7895:29)",
+              "KernelHost.processRequest (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:9479:36)",
+              "KernelHost.run (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:9442:22)",
+              "Immediate._onImmediate (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:9443:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/PythonStack/KerKer/ApiGatewayPetStoreApi/PetType/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "KerKerApiGatewayPetStoreApiPetTypeF83A869B",
+            "trace": [
+              "new Model (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/jsii-kernel-Y08ME4/node_modules/@aws-cdk/aws-apigateway/lib/model.js:94:26)",
+              "RestApi.addModel (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/jsii-kernel-Y08ME4/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:476:16)",
+              "StateMachineApiGatewayExample._createRestApi (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/jsii-kernel-Y08ME4/node_modules/projen-statemachine-example/lib/statemachine-examples.js:57:46)",
+              "new StateMachineApiGatewayExample (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/jsii-kernel-Y08ME4/node_modules/projen-statemachine-example/lib/statemachine-examples.js:205:30)",
+              "/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:8154:58",
+              "Kernel._wrapSandboxCode (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:8582:24)",
+              "Kernel._create (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:8154:34)",
+              "Kernel.create (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:7895:29)",
+              "KernelHost.processRequest (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:9479:36)",
+              "KernelHost.run (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:9442:22)",
+              "Immediate._onImmediate (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:9443:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/PythonStack/KerKer/ApiGatewayPetStoreApi/PetsModel/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "KerKerApiGatewayPetStoreApiPetsModel08B53F16",
+            "trace": [
+              "new Model (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/jsii-kernel-Y08ME4/node_modules/@aws-cdk/aws-apigateway/lib/model.js:94:26)",
+              "RestApi.addModel (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/jsii-kernel-Y08ME4/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:476:16)",
+              "StateMachineApiGatewayExample._createRestApi (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/jsii-kernel-Y08ME4/node_modules/projen-statemachine-example/lib/statemachine-examples.js:67:43)",
+              "new StateMachineApiGatewayExample (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/jsii-kernel-Y08ME4/node_modules/projen-statemachine-example/lib/statemachine-examples.js:205:30)",
+              "/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:8154:58",
+              "Kernel._wrapSandboxCode (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:8582:24)",
+              "Kernel._create (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:8154:34)",
+              "Kernel.create (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:7895:29)",
+              "KernelHost.processRequest (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:9479:36)",
+              "KernelHost.run (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:9442:22)",
+              "Immediate._onImmediate (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:9443:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/PythonStack/KerKer/ApiGatewayPetStoreApi/NewPet/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "KerKerApiGatewayPetStoreApiNewPet026A479A",
+            "trace": [
+              "new Model (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/jsii-kernel-Y08ME4/node_modules/@aws-cdk/aws-apigateway/lib/model.js:94:26)",
+              "RestApi.addModel (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/jsii-kernel-Y08ME4/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:476:16)",
+              "StateMachineApiGatewayExample._createRestApi (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/jsii-kernel-Y08ME4/node_modules/projen-statemachine-example/lib/statemachine-examples.js:77:45)",
+              "new StateMachineApiGatewayExample (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/jsii-kernel-Y08ME4/node_modules/projen-statemachine-example/lib/statemachine-examples.js:205:30)",
+              "/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:8154:58",
+              "Kernel._wrapSandboxCode (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:8582:24)",
+              "Kernel._create (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:8154:34)",
+              "Kernel.create (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:7895:29)",
+              "KernelHost.processRequest (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:9479:36)",
+              "KernelHost.run (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:9442:22)",
+              "Immediate._onImmediate (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:9443:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/PythonStack/KerKer/ApiGatewayPetStoreApi/NewPetResponse/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "KerKerApiGatewayPetStoreApiNewPetResponseF627B28A",
+            "trace": [
+              "new Model (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/jsii-kernel-Y08ME4/node_modules/@aws-cdk/aws-apigateway/lib/model.js:94:26)",
+              "RestApi.addModel (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/jsii-kernel-Y08ME4/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:476:16)",
+              "StateMachineApiGatewayExample._createRestApi (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/jsii-kernel-Y08ME4/node_modules/projen-statemachine-example/lib/statemachine-examples.js:90:53)",
+              "new StateMachineApiGatewayExample (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/jsii-kernel-Y08ME4/node_modules/projen-statemachine-example/lib/statemachine-examples.js:205:30)",
+              "/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:8154:58",
+              "Kernel._wrapSandboxCode (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:8582:24)",
+              "Kernel._create (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:8154:34)",
+              "Kernel.create (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:7895:29)",
+              "KernelHost.processRequest (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:9479:36)",
+              "KernelHost.run (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:9442:22)",
+              "Immediate._onImmediate (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:9443:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/PythonStack/KerKer/StepFunctionExecutionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "KerKerStepFunctionExecutionRoleE8FEF4EC",
+            "trace": [
+              "new Role (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/jsii-kernel-Y08ME4/node_modules/@aws-cdk/aws-iam/lib/role.js:72:22)",
+              "StateMachineApiGatewayExample._createWorkFlowRole (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/jsii-kernel-Y08ME4/node_modules/projen-statemachine-example/lib/statemachine-examples.js:150:43)",
+              "new StateMachineApiGatewayExample (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/jsii-kernel-Y08ME4/node_modules/projen-statemachine-example/lib/statemachine-examples.js:206:49)",
+              "/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:8154:58",
+              "Kernel._wrapSandboxCode (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:8582:24)",
+              "Kernel._create (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:8154:34)",
+              "Kernel.create (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:7895:29)",
+              "KernelHost.processRequest (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:9479:36)",
+              "KernelHost.run (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:9442:22)",
+              "Immediate._onImmediate (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:9443:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/PythonStack/KerKer/StepFunctionExecutionRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "KerKerStepFunctionExecutionRoleDefaultPolicy827D55A3",
+            "trace": [
+              "new Policy (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/jsii-kernel-Y08ME4/node_modules/@aws-cdk/aws-iam/lib/policy.js:56:26)",
+              "Role.addToPrincipalPolicy (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/jsii-kernel-Y08ME4/node_modules/@aws-cdk/aws-iam/lib/role.js:205:34)",
+              "Role.addToPolicy (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/jsii-kernel-Y08ME4/node_modules/@aws-cdk/aws-iam/lib/role.js:217:21)",
+              "StateMachineApiGatewayExample._createWorkFlowRole (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/jsii-kernel-Y08ME4/node_modules/projen-statemachine-example/lib/statemachine-examples.js:155:35)",
+              "new StateMachineApiGatewayExample (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/jsii-kernel-Y08ME4/node_modules/projen-statemachine-example/lib/statemachine-examples.js:206:49)",
+              "/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:8154:58",
+              "Kernel._wrapSandboxCode (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:8582:24)",
+              "Kernel._create (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:8154:34)",
+              "Kernel.create (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:7895:29)",
+              "KernelHost.processRequest (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:9479:36)",
+              "KernelHost.run (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:9442:22)",
+              "Immediate._onImmediate (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:9443:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/PythonStack/KerKer/StateMachine/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "KerKerStateMachine5B14D4C0",
+            "trace": [
+              "new StateMachine (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/jsii-kernel-Y08ME4/node_modules/@aws-cdk/aws-stepfunctions/lib/state-machine.js:274:26)",
+              "StateMachineApiGatewayExample._createStateMachine (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/jsii-kernel-Y08ME4/node_modules/projen-statemachine-example/lib/statemachine-examples.js:199:34)",
+              "new StateMachineApiGatewayExample (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/jsii-kernel-Y08ME4/node_modules/projen-statemachine-example/lib/statemachine-examples.js:213:34)",
+              "/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:8154:58",
+              "Kernel._wrapSandboxCode (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:8582:24)",
+              "Kernel._create (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:8154:34)",
+              "Kernel.create (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:7895:29)",
+              "KernelHost.processRequest (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:9479:36)",
+              "KernelHost.run (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:9442:22)",
+              "Immediate._onImmediate (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:9443:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/PythonStack/OStateMachine": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "OStateMachine",
+            "trace": [
+              "/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:8154:58",
+              "Kernel._wrapSandboxCode (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:8582:24)",
+              "Kernel._create (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:8154:34)",
+              "Kernel.create (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:7895:29)",
+              "KernelHost.processRequest (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:9479:36)",
+              "KernelHost.run (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:9442:22)",
+              "Immediate._onImmediate (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:9443:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/PythonStack/OExecutionOutput": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "OExecutionOutput",
+            "trace": [
+              "/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:8154:58",
+              "Kernel._wrapSandboxCode (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:8582:24)",
+              "Kernel._create (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:8154:34)",
+              "Kernel.create (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:7895:29)",
+              "KernelHost.processRequest (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:9479:36)",
+              "KernelHost.run (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:9442:22)",
+              "Immediate._onImmediate (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:9443:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/PythonStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata",
+            "trace": [
+              "new MetadataResource (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/jsii-kernel-Y08ME4/node_modules/@aws-cdk/core/lib/private/metadata-resource.js:22:30)",
+              "/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/jsii-kernel-Y08ME4/node_modules/@aws-cdk/core/lib/private/synthesis.js:128:9",
+              "visit (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/jsii-kernel-Y08ME4/node_modules/@aws-cdk/core/lib/private/synthesis.js:185:9)",
+              "visit (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/jsii-kernel-Y08ME4/node_modules/@aws-cdk/core/lib/private/synthesis.js:182:9)",
+              "injectMetadataResources (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/jsii-kernel-Y08ME4/node_modules/@aws-cdk/core/lib/private/synthesis.js:117:5)",
+              "Object.synthesize (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/jsii-kernel-Y08ME4/node_modules/@aws-cdk/core/lib/private/synthesis.js:17:5)",
+              "App.synth (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/jsii-kernel-Y08ME4/node_modules/@aws-cdk/core/lib/stage.js:100:41)",
+              "/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:7970:134",
+              "Kernel._wrapSandboxCode (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:8582:24)",
+              "/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:7970:107",
+              "Kernel._ensureSync (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:8563:28)",
+              "Kernel.invoke (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:7970:34)",
+              "KernelHost.processRequest (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:9479:36)",
+              "KernelHost.run (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:9442:22)",
+              "Immediate._onImmediate (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:9443:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/PythonStack/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable",
+            "trace": [
+              "new MetadataResource (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/jsii-kernel-Y08ME4/node_modules/@aws-cdk/core/lib/private/metadata-resource.js:30:35)",
+              "/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/jsii-kernel-Y08ME4/node_modules/@aws-cdk/core/lib/private/synthesis.js:128:9",
+              "visit (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/jsii-kernel-Y08ME4/node_modules/@aws-cdk/core/lib/private/synthesis.js:185:9)",
+              "visit (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/jsii-kernel-Y08ME4/node_modules/@aws-cdk/core/lib/private/synthesis.js:182:9)",
+              "injectMetadataResources (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/jsii-kernel-Y08ME4/node_modules/@aws-cdk/core/lib/private/synthesis.js:117:5)",
+              "Object.synthesize (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/jsii-kernel-Y08ME4/node_modules/@aws-cdk/core/lib/private/synthesis.js:17:5)",
+              "App.synth (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/jsii-kernel-Y08ME4/node_modules/@aws-cdk/core/lib/stage.js:100:41)",
+              "/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:7970:134",
+              "Kernel._wrapSandboxCode (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:8582:24)",
+              "/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:7970:107",
+              "Kernel._ensureSync (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:8563:28)",
+              "Kernel.invoke (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:7970:34)",
+              "KernelHost.processRequest (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:9479:36)",
+              "KernelHost.run (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:9442:22)",
+              "Immediate._onImmediate (/private/var/folders/63/ycr20tj9669cfxpyfr34g_fwrgsl08/T/tmpoxzo1kg9/lib/program.js:9443:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ]
+      },
+      "displayName": "PythonStack"
+    }
+  }
+}

@@ -1,0 +1,2 @@
+aws-cdk.core
+scotthsieh_projen_statemachine

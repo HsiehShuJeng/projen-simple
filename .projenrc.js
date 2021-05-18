@@ -32,7 +32,19 @@ const project = new AwsCdkConstructLibrary({
   eslint: true,
   dependabot: true,
 
-  gitignore: ['.idea', 'public.pem', 'private.pem'],
+  gitignore: ['.idea',
+    // For Mavn GPG
+    'public.pem',
+    'private.pem',
+    // For Python demo
+    '*.swp',
+    'package-lock.json',
+    '__pycache__',
+    '.pytest_cache',
+    '.env',
+    '.venv',
+    '*.egg-info'
+  ],
   defaultReleaseBranch: 'main',
 
   // publish to npm

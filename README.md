@@ -21,13 +21,41 @@ This library constrcution is referred to [this AWS blog](https://aws.amazon.com/
         const stageName = 'default';
         const partPath = 'pets';
         const exampleConstruct = new StateMachineApiGatewayExample(this, 'KerKer', {
-        stageName: stageName, partPath: partPath
-        });
+            stageName: stageName, partPath: partPath});
 
         new cdk.CfnOutput(this, 'OStateMachine', {
-        value: exampleConstruct.stateMachine.stateMachineArn});
-        new cdk.CfnOutput(this, 'OExecutionOutput', {value: exampleConstruct.executionInput, description: 'Sample input to StartExecution.'});
+            value: exampleConstruct.stateMachine.stateMachineArn});
+        new cdk.CfnOutput(this, 'OExecutionOutput', {
+            value: exampleConstruct.executionInput, description: 'Sample input to StartExecution.'});
     }
+   ```
+## Python  
+   ```bash
+   $ cdk init --language python
+   $ cat <<EOL > requirements.txt
+aws-cdk.core
+scotthsieh_projen_statemachine
+EOL
+   $ python -m pip install -r requirements.txt
+   ```
+   ```python
+   from aws_cdk import core as cdk
+   from scotthsieh_projen_statemachine import StateMachineApiGatewayExample
+
+   class PythonStack(cdk.Stack):
+       def __init__(self, scope: cdk.Construct, construct_id: str, **kwargs) -> None:
+            super().__init__(scope, construct_id, **kwargs)
+            
+            stage_name = 'default'
+            part_path = 'pets'
+            example_construct = StateMachineApiGatewayExample(
+                self, 'PythonStatemachne', stage_name=stage_name, part_path=part_path,
+            )
+
+            cdk.CfnOutput(self, "OStateMachine",
+                value=example_construct.state_machine.state_machine_arn
+            )
+            cdk.CfnOutput(self, "OExecutionOutput", value=example_construct.execution_input, description="Sample input to StartExecution.")
    ```
 
 # References  
