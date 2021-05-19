@@ -1,3 +1,7 @@
+![Build](https://github.com/HsiehShuJeng/projen-simple/actions/workflows/build.yml/badge.svg) ![Release](https://github.com/HsiehShuJeng/projen-simple/workflows/Release/badge.svg)  
+![Dependencies](https://david-dm.org/HsiehShuJeng/projen-simple.svg)  ![Maintainability](https://api.codeclimate.com/v1/badges/233d6164cc263400b9e5/maintainability)    
+![Python](https://img.shields.io/pypi/pyversions/scotthsieh_projen_statemachine) ![pip install](https://img.shields.io/badge/pip%20install-scotthsieh__projen__statemachine-blue)  
+![npm](https://img.shields.io/npm/v/projen-statemachine-example) ![pypi](https://img.shields.io/pypi/v/scotthsieh_projen_statemachine) ![Maven](https://img.shields.io/maven-central/v/io.github.hsiehshujeng/projen-statemachine) ![nuget](https://img.shields.io/nuget/v/Projen.Statemachine)   
 # projen-simple  
 Build a custom construct based on an example in an AWS Blog post and use [projen](https://github.com/projen/projen) to publish to 4 language repositories.   
 (Hope Go is coming soon)  
@@ -11,7 +15,7 @@ This library constrcution is referred to the first example in this AWS blog, [*I
    ```bash
    $ cdk --init language typescript
    $ yarn add projen-statemachine-example
-   ``` 
+   ```
    ```typescript
    import { StateMachineApiGatewayExample } from 'projen-statemachine-example';
 
@@ -110,52 +114,57 @@ EOL
             String stageName = "default";
             String partPath = "pets";
             StateMachineApiGatewayExample exampleConstruct = new StateMachineApiGatewayExample(this, "KerKer",
-                StateMachineApiGatewayExampleProps.builder().stageName(stageName).partPath(partPath).build());
+                StateMachineApiGatewayExampleProps.builder()
+                    .stageName(stageName)
+                    .partPath(partPath)
+                    .build());
 
             new CfnOutput(this, "OStateMachine",
                 CfnOutputProps.builder()
-                    .value(exampleConstruct.getStateMachine().getStateMachineArn()).build());
+                    .value(exampleConstruct.getStateMachine().getStateMachineArn())
+                    .build());
             new CfnOutput(this, "OExecutionOutput", CfnOutputProps.builder()
                 .value(exampleConstruct.getExecutionInput())
-                .description("Sample input to StartExecution.").build());
+                .description("Sample input to StartExecution.")
+                .build());
         }
     }
    ```
 ## C#
-    ```bash
-    $ cdk init --language csharp
-    $ dotnet add src/Csharp package Projen.Statemachine --version 0.1.21
-    ```
-    ```cs
-    using Amazon.CDK;
-    using ScottHsieh.Examples;
-
-    namespace Csharp
-    {
-        public class CsharpStack : Stack
-        {
-            internal CsharpStack(Construct scope, string id, IStackProps props = null) : base(scope, id, props)
-            {
-                string stageName = "default";
-                string partPath = "pets";
-
-                var exampleConstruct = new StateMachineApiGatewayExample(this, "KerKer", new StateMachineApiGatewayExampleProps
-                {
-                    StageName = stageName,
-                    PartPath = partPath
-                });
-
-                new CfnOutput(this, "OStateMachine", new CfnOutputProps
-                {
-                    Value = exampleConstruct.StateMachine.StateMachineArn
-                });
-                new CfnOutput(this, "OExecutionOutput", new CfnOutputProps
-                {
-                    Value = exampleConstruct.ExecutionInput,
-                    Description = "Sample input to StartExecution."
-                });
-            }
-        }
+   ```bash
+   $ cdk init --language csharp
+   $ dotnet add src/Csharp package Projen.Statemachine --version 0.1.21
+   ```
+   ```cs
+   using Amazon.CDK;
+   using ScottHsieh.Examples;
+   
+   namespace Csharp
+   {
+       public class CsharpStack : Stack
+       {
+           internal CsharpStack(Construct scope, string id, IStackProps props = null) : base(scope, id, props)
+           {
+               string stageName = "default";
+               string partPath = "pets";
+               
+               var exampleConstruct = new StateMachineApiGatewayExample(this, "KerKer", new StateMachineApiGatewayExampleProps
+               {
+                   StageName = stageName,
+                   PartPath = partPath
+               });
+               
+               new CfnOutput(this, "OStateMachine", new CfnOutputProps
+               {
+                   Value = exampleConstruct.StateMachine.StateMachineArn
+               });
+               new CfnOutput(this, "OExecutionOutput", new CfnOutputProps
+               {
+                   Value = exampleConstruct.ExecutionInput,
+                   Description = "Sample input to StartExecution."
+               });
+           }
+       }
     }
     ```
 

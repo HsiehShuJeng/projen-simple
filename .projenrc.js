@@ -3,7 +3,7 @@ const project = new AwsCdkConstructLibrary({
   author: 'scott.hsieh',
   authorName: 'Shu-Jeng Hsieh',
   authorAddress: 'https://fantasticsie.medium.com/',
-  keywords: ['stepfunctions', 'apigateway'],
+  keywords: ['stepfunctions', 'apigateway', 'projen', 'scott.hsieh'],
 
   catalog: {
     twitter: 'fantasticHsieh',

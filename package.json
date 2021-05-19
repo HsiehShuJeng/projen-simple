@@ -73,6 +73,8 @@
   "keywords": [
     "apigateway",
     "cdk",
+    "projen",
+    "scott.hsieh",
     "stepfunctions"
   ],
   "main": "lib/index.js",
