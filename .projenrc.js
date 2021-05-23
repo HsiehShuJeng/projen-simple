@@ -9,12 +9,13 @@ const project = new AwsCdkConstructLibrary({
     twitter: 'fantasticHsieh',
   },
 
-  cdkVersion: '1.104.0',
+  cdkVersion: '1.105.0',
   defaultReleaseBranch: 'main',
   name: 'projen-statemachine-example',
   repositoryUrl: 'https://github.com/HsiehShuJeng/projen-simple.git',
   projectName: 'projen-statemachine-example',
   projectType: ProjectType.LIB,
+  projenUpgradeAutoMerge: true,
 
   cdkDependencies: [
     '@aws-cdk/core',
@@ -39,7 +40,7 @@ const project = new AwsCdkConstructLibrary({
   dependabot: true,
 
   gitignore: [
-    'cdk.out/',
+    'cdk.out',
     // For Mavn GPG
     'public.pem',
     'private.pem',
