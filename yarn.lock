@@ -2,7 +2,7 @@
 # yarn lockfile v1
 
 
-"@aws-cdk/assert@^1.105.0":
+"@aws-cdk/assert@^1.104.0":
   version "1.105.0"
   resolved "https://registry.yarnpkg.com/@aws-cdk/assert/-/assert-1.105.0.tgz#4c51f7f1db9ab553b9e17c00482836ef15fd9732"
   integrity sha512-4Sq++hDQ54DccpsSpd/d/G5dEgNoLVFkjXD/Dhr8JD5ls4K3urrAWdYEDGqGJG5Ml4kwWPxggo3YZuCroPmzSA==
@@ -21,7 +21,7 @@
     "@aws-cdk/cx-api" "1.105.0"
     constructs "^3.3.69"
 
-"@aws-cdk/aws-apigateway@1.105.0", "@aws-cdk/aws-apigateway@^1.105.0":
+"@aws-cdk/aws-apigateway@1.105.0", "@aws-cdk/aws-apigateway@^1.104.0":
   version "1.105.0"
   resolved "https://registry.yarnpkg.com/@aws-cdk/aws-apigateway/-/aws-apigateway-1.105.0.tgz#ab5ca6189091252fe0ca0cebade81d4296cd0625"
   integrity sha512-yUJXJkezppIwRjfujuHebQiH/R0JnGWCQeOYf3qgJ2nIvMToDY6aI9WNAxQwe8VfAkCi/ZAke12AX7dXV3xQaQ==
@@ -356,7 +356,7 @@
     "@aws-cdk/custom-resources" "1.105.0"
     constructs "^3.3.69"
 
-"@aws-cdk/aws-iam@1.105.0", "@aws-cdk/aws-iam@^1.105.0":
+"@aws-cdk/aws-iam@1.105.0", "@aws-cdk/aws-iam@^1.104.0":
   version "1.105.0"
   resolved "https://registry.yarnpkg.com/@aws-cdk/aws-iam/-/aws-iam-1.105.0.tgz#02f3dd85013832aaa3c877ecf79648a817f5e31e"
   integrity sha512-I6d5Z9BR98pN116qGmTYtlK2yDCg6dzSiRYv1vnUqty2Q/KPPwLeIJdc1CI0tyon8o8mYK1ZV+STX24ChTaY7w==
@@ -556,7 +556,7 @@
     "@aws-cdk/core" "1.105.0"
     constructs "^3.3.69"
 
-"@aws-cdk/aws-stepfunctions-tasks@^1.105.0":
+"@aws-cdk/aws-stepfunctions-tasks@^1.104.0":
   version "1.105.0"
   resolved "https://registry.yarnpkg.com/@aws-cdk/aws-stepfunctions-tasks/-/aws-stepfunctions-tasks-1.105.0.tgz#39140b65714f55a72dd3fc057f06150cd8ed08f8"
   integrity sha512-4S9dPYEBN1zBo/m+VrJaKqBK7ta3qEwXQS1kCPCQcaB5wtLN/1pGrT434bH2vQ7BQTOVXS3yzM6Y/9IBUhuyzA==
@@ -580,7 +580,7 @@
     "@aws-cdk/core" "1.105.0"
     constructs "^3.3.69"
 
-"@aws-cdk/aws-stepfunctions@1.105.0", "@aws-cdk/aws-stepfunctions@^1.105.0":
+"@aws-cdk/aws-stepfunctions@1.105.0", "@aws-cdk/aws-stepfunctions@^1.104.0":
   version "1.105.0"
   resolved "https://registry.yarnpkg.com/@aws-cdk/aws-stepfunctions/-/aws-stepfunctions-1.105.0.tgz#09c85b2b2d099a44d78927ed68627f3958318765"
   integrity sha512-CP+wnOW5BHn+9nD7Ubaw5yNhOACBCmtpogIHsKvpZeTQKBumyaV1tmrj2MrGF+4xYl+Y8AtnCSuKH2fU+d5NMw==
@@ -621,7 +621,7 @@
     string-width "^4.2.2"
     table "^6.7.0"
 
-"@aws-cdk/core@1.105.0", "@aws-cdk/core@^1.105.0":
+"@aws-cdk/core@1.105.0", "@aws-cdk/core@^1.104.0":
   version "1.105.0"
   resolved "https://registry.yarnpkg.com/@aws-cdk/core/-/core-1.105.0.tgz#204db5ea29a36974b4ac0380392143c37d087b16"
   integrity sha512-aMuGcm0xpTgIDFwD86mncAEHqcVxxzVcIPknbTMgOUoL99M/ykoOqwU8lmRZVEeKPmRiwFeBgfEvIsT9hJ6t/Q==
