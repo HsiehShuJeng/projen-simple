@@ -1,11 +1,11 @@
+# projen-simple  
+Build a custom construct based on an example in an AWS Blog post and use [projen](https://github.com/projen/projen) to publish to 4 language repositories, i.e., npm, PyPI, Central Maven, and NuGet.     
+(Hope Go is coming soon)  
 [![License](https://img.shields.io/badge/License-Apache%202.0-green)](https://opensource.org/licenses/Apache-2.0)  
 ![Build](https://github.com/HsiehShuJeng/projen-simple/actions/workflows/build.yml/badge.svg) ![Release](https://github.com/HsiehShuJeng/projen-simple/workflows/Release/badge.svg)  
 ![Dependencies](https://david-dm.org/HsiehShuJeng/projen-simple.svg) ![Maintainability](https://api.codeclimate.com/v1/badges/233d6164cc263400b9e5/maintainability)  
 ![Python](https://img.shields.io/pypi/pyversions/scotthsieh_projen_statemachine) ![pip install](https://img.shields.io/badge/pip%20install-scotthsieh__projen__statemachine-blue)  
 [![npm](https://img.shields.io/npm/v/projen-statemachine-example)](https://www.npmjs.com/package/projen-statemachine-example) [![pypi](https://img.shields.io/pypi/v/scotthsieh_projen_statemachine)](https://pypi.org/project/scotthsieh-projen-statemachine/) [![Maven](https://img.shields.io/maven-central/v/io.github.hsiehshujeng/projen-statemachine)](https://search.maven.org/artifact/io.github.hsiehshujeng/projen-statemachine) [![nuget](https://img.shields.io/nuget/v/Projen.Statemachine)](https://www.nuget.org/packages/Projen.Statemachine/)  
-# projen-simple  
-Build a custom construct based on an example in an AWS Blog post and use [projen](https://github.com/projen/projen) to publish to 4 language repositories.   
-(Hope Go is coming soon)  
 
 # Architecture  
 This library constrcution is referred to the first example in this AWS blog, [*Introducing Amazon API Gateway service integration for AWS Step Functions*](https://aws.amazon.com/tw/blogs/compute/introducing-amazon-api-gateway-service-integration-for-aws-step-functions/) written by Benjanmin Smith. After you deploy the stack with whatever programming language you like, i.e., Typescript, Python, Java, or C sharp, you'll get a view similar to the following diagram:  
