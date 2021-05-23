@@ -12,7 +12,7 @@ import * as iam from '@aws-cdk/aws-iam';
 import * as sfn from '@aws-cdk/aws-stepfunctions';
 import * as tasks from '@aws-cdk/aws-stepfunctions-tasks';
 import * as cdk from '@aws-cdk/core';
-import { CallApiGatewayRestApiEndpointwithResultSelector } from './utilities';
+// import { CallApiGatewayRestApiEndpointwithResultSelector } from './utilities';
 
 export interface StateMachineApiGatewayExampleProps {
   /**
@@ -223,7 +223,7 @@ export class StateMachineApiGatewayExample extends cdk.Construct {
     restApi: RestApi,
     stageName: string,
     partPath: string) => {
-    const submitJob = new CallApiGatewayRestApiEndpointwithResultSelector(this, 'Add Pet to Store', {
+    const submitJob = new tasks.CallApiGatewayRestApiEndpoint(this, 'Add Pet to Store', {
       api: restApi,
       stageName: stageName,
       apiPath: `/${partPath}`,
@@ -232,7 +232,7 @@ export class StateMachineApiGatewayExample extends cdk.Construct {
       requestBody: { type: sfn.InputType.TEXT, value: '$.NewPet' },
       resultSelector: { 'ResponseBody.$': '$.ResponseBody' },
     });
-    const storePetJob = new CallApiGatewayRestApiEndpointwithResultSelector(this, 'Retrieve Pet Store Data', {
+    const storePetJob = new tasks.CallApiGatewayRestApiEndpoint(this, 'Retrieve Pet Store Data', {
       api: restApi,
       stageName: stageName,
       apiPath: `/${partPath}`,
