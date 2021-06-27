@@ -6,21 +6,21 @@
   },
   "scripts": {
     "clobber": "npx projen clobber",
-    "bump": "npx projen bump",
-    "unbump": "npx projen unbump",
     "compile": "npx projen compile",
     "test:compile": "npx projen test:compile",
     "test": "npx projen test",
     "build": "npx projen build",
     "test:watch": "npx projen test:watch",
     "test:update": "npx projen test:update",
-    "upgrade-projen": "npx projen upgrade-projen",
+    "bump": "npx projen bump",
+    "unbump": "npx projen unbump",
+    "upgrade-dependencies": "npx projen upgrade-dependencies",
     "default": "npx projen default",
     "watch": "npx projen watch",
     "package": "npx projen package",
     "eslint": "npx projen eslint",
-    "docgen": "npx projen docgen",
     "compat": "npx projen compat",
+    "docgen": "npx projen docgen",
     "projen": "npx projen",
     "start": "npx projen start"
   },
@@ -30,7 +30,7 @@
     "organization": false
   },
   "devDependencies": {
-    "@aws-cdk/assert": "^1.105.0",
+    "@aws-cdk/assert": "^1.110.0",
     "@types/jest": "^26.0.23",
     "@types/node": "^10.17.0",
     "@typescript-eslint/eslint-plugin": "^4.23.0",
@@ -48,27 +48,26 @@
     "jsii-pacmak": "^1.29.0",
     "json-schema": "^0.3.0",
     "npm-check-updates": "^11",
-    "projen": "^0.18.5",
+    "projen": "^0.24.12",
     "source-map-support": "^0.5.19",
     "standard-version": "^9",
     "ts-jest": "^26.5.6",
-    "typedoc": "^0.20.35",
     "typescript": "^4.2.4"
   },
   "peerDependencies": {
-    "@aws-cdk/aws-apigateway": "^1.105.0",
-    "@aws-cdk/aws-iam": "^1.105.0",
-    "@aws-cdk/aws-stepfunctions": "^1.105.0",
-    "@aws-cdk/aws-stepfunctions-tasks": "^1.105.0",
-    "@aws-cdk/core": "^1.105.0",
+    "@aws-cdk/aws-apigateway": "^1.110.0",
+    "@aws-cdk/aws-iam": "^1.110.0",
+    "@aws-cdk/aws-stepfunctions": "^1.110.0",
+    "@aws-cdk/aws-stepfunctions-tasks": "^1.110.0",
+    "@aws-cdk/core": "^1.110.0",
     "constructs": "^3.2.27"
   },
   "dependencies": {
-    "@aws-cdk/aws-apigateway": "^1.105.0",
-    "@aws-cdk/aws-iam": "^1.105.0",
-    "@aws-cdk/aws-stepfunctions": "^1.105.0",
-    "@aws-cdk/aws-stepfunctions-tasks": "^1.105.0",
-    "@aws-cdk/core": "^1.105.0"
+    "@aws-cdk/aws-apigateway": "^1.110.0",
+    "@aws-cdk/aws-iam": "^1.110.0",
+    "@aws-cdk/aws-stepfunctions": "^1.110.0",
+    "@aws-cdk/aws-stepfunctions-tasks": "^1.110.0",
+    "@aws-cdk/core": "^1.110.0"
   },
   "bundledDependencies": [],
   "keywords": [

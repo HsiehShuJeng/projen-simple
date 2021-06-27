@@ -2,7 +2,7 @@
   "dependencies": [
     {
       "name": "@aws-cdk/assert",
-      "version": "^1.105.0",
+      "version": "^1.110.0",
       "type": "build"
     },
     {
@@ -78,7 +78,6 @@
     },
     {
       "name": "projen",
-      "version": "^0.18.5",
       "type": "build"
     },
     {
@@ -95,37 +94,32 @@
       "type": "build"
     },
     {
-      "name": "typedoc",
-      "version": "^0.20.35",
-      "type": "build"
-    },
-    {
       "name": "typescript",
       "type": "build"
     },
     {
       "name": "@aws-cdk/aws-apigateway",
-      "version": "^1.105.0",
+      "version": "^1.110.0",
       "type": "peer"
     },
     {
       "name": "@aws-cdk/aws-iam",
-      "version": "^1.105.0",
+      "version": "^1.110.0",
       "type": "peer"
     },
     {
       "name": "@aws-cdk/aws-stepfunctions-tasks",
-      "version": "^1.105.0",
+      "version": "^1.110.0",
       "type": "peer"
     },
     {
       "name": "@aws-cdk/aws-stepfunctions",
-      "version": "^1.105.0",
+      "version": "^1.110.0",
       "type": "peer"
     },
     {
       "name": "@aws-cdk/core",
-      "version": "^1.105.0",
+      "version": "^1.110.0",
       "type": "peer"
     },
     {
@@ -135,27 +129,27 @@
     },
     {
       "name": "@aws-cdk/aws-apigateway",
-      "version": "^1.105.0",
+      "version": "^1.110.0",
       "type": "runtime"
     },
     {
       "name": "@aws-cdk/aws-iam",
-      "version": "^1.105.0",
+      "version": "^1.110.0",
       "type": "runtime"
     },
     {
       "name": "@aws-cdk/aws-stepfunctions-tasks",
-      "version": "^1.105.0",
+      "version": "^1.110.0",
       "type": "runtime"
     },
     {
       "name": "@aws-cdk/aws-stepfunctions",
-      "version": "^1.105.0",
+      "version": "^1.110.0",
       "type": "runtime"
     },
     {
       "name": "@aws-cdk/core",
-      "version": "^1.105.0",
+      "version": "^1.110.0",
       "type": "runtime"
     }
   ],
