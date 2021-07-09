@@ -9,7 +9,7 @@ const project = new AwsCdkConstructLibrary({
     twitter: 'fantasticHsieh',
   },
 
-  cdkVersion: '1.110.1',
+  cdkVersion: '1.111.0',
   defaultReleaseBranch: 'main',
   name: 'projen-statemachine-example',
   repositoryUrl: 'https://github.com/HsiehShuJeng/projen-simple.git',

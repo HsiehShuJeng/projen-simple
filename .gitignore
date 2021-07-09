@@ -23,9 +23,10 @@
 .venv
 .vscode/
 .yarn-integrity
-/.changelog.tmp.md
 /coverage
 /dist
+/dist/changelog.md
+/dist/version.txt
 /lib
 /test-reports/
 __pycache__
@@ -54,6 +55,7 @@ yarn-error.log*
 !/.github/workflows/auto-approve.yml
 !/.github/workflows/build.yml
 !/.github/workflows/release.yml
+!/.github/workflows/stale.yml
 !/.github/workflows/upgrade-dependencies.yml
 !/.mergify.yml
 !/.npmignore
