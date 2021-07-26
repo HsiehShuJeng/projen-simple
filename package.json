@@ -1,5 +1,6 @@
 {
   "name": "projen-statemachine-example",
+  "description": "An example construct for deploying to npm, PyPi, Maven, and Nuget with Amazon API Gateway and AWS Step Functions.",
   "repository": {
     "type": "git",
     "url": "https://github.com/HsiehShuJeng/projen-simple.git"

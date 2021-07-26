@@ -4,6 +4,7 @@ const project = new AwsCdkConstructLibrary({
   authorName: 'Shu-Jeng Hsieh',
   authorAddress: 'https://fantasticsie.medium.com/',
   keywords: ['stepfunctions', 'apigateway', 'projen', 'scott.hsieh'],
+  description: 'An example construct for deploying to npm, PyPi, Maven, and Nuget with Amazon API Gateway and AWS Step Functions.',
 
   catalog: {
     twitter: 'fantasticHsieh',
