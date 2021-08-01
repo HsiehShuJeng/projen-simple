@@ -27,8 +27,7 @@
     "publish:nuget": "npx projen publish:nuget",
     "docgen": "npx projen docgen",
     "release": "npx projen release",
-    "projen": "npx projen",
-    "start": "npx projen start"
+    "projen": "npx projen"
   },
   "author": {
     "name": "Shu-Jeng Hsieh",
@@ -41,8 +40,8 @@
     "@types/node": "^10.17.0",
     "@typescript-eslint/eslint-plugin": "^4.28.5",
     "@typescript-eslint/parser": "^4.28.5",
-    "esbuild": "^0.12.16",
-    "eslint": "^7.31.0",
+    "esbuild": "^0.12.17",
+    "eslint": "^7.32.0",
     "eslint-import-resolver-node": "^0.3.4",
     "eslint-import-resolver-typescript": "^2.4.0",
     "eslint-plugin-import": "^2.23.4",
@@ -54,7 +53,7 @@
     "jsii-pacmak": "^1.32.0",
     "json-schema": "^0.3.0",
     "npm-check-updates": "^11",
-    "projen": "^0.27.9",
+    "projen": "^0.27.12",
     "source-map-support": "^0.5.19",
     "standard-version": "^9",
     "ts-jest": "^26.5.6",
