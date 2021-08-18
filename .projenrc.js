@@ -38,6 +38,7 @@ const project = new AwsCdkConstructLibrary({
   projenUpgradeSecret: 'PROJEN_UPGRADE_SECRET',
   autoApproveOptions: {
     secret: 'GITHUB_TOKEN',
+    allowedUsernames: ['HsiehShuJeng']
   },
   depsUpgradeAutoMerge: true,
 
