@@ -1,3 +1,4 @@
+import * as cdk from 'aws-cdk-lib';
 import {
   AuthorizationType,
   EndpointType,
@@ -7,12 +8,11 @@ import {
   JsonSchemaType,
   PassthroughBehavior,
   RestApi,
-} from '@aws-cdk/aws-apigateway';
-import * as iam from '@aws-cdk/aws-iam';
-import * as sfn from '@aws-cdk/aws-stepfunctions';
-import * as tasks from '@aws-cdk/aws-stepfunctions-tasks';
-import * as cdk from '@aws-cdk/core';
-// import { CallApiGatewayRestApiEndpointwithResultSelector } from './utilities';
+} from 'aws-cdk-lib/aws-apigateway';
+import * as iam from 'aws-cdk-lib/aws-iam';
+import * as sfn from 'aws-cdk-lib/aws-stepfunctions';
+import * as tasks from 'aws-cdk-lib/aws-stepfunctions-tasks';
+import { Construct } from 'constructs';
 
 export interface StateMachineApiGatewayExampleProps {
   /**
@@ -37,7 +37,7 @@ export interface StateMachineApiGatewayExampleProps {
  * are manipulated by a state machine managed in AWS StepFucntions.
  *
  */
-export class StateMachineApiGatewayExample extends cdk.Construct {
+export class StateMachineApiGatewayExample extends Construct {
   /**
      * sample input to start execution for the workflow.
      */
@@ -46,7 +46,7 @@ export class StateMachineApiGatewayExample extends cdk.Construct {
      * the representation of a state machine.
      */
   readonly stateMachine: sfn.StateMachine;
-  constructor(parent: cdk.Construct, name: string, props: StateMachineApiGatewayExampleProps) {
+  constructor(parent: Construct, name: string, props: StateMachineApiGatewayExampleProps) {
     super(parent, name);
 
     const restApi = this._createRestApi(props.stageName, props.partPath);
@@ -181,7 +181,7 @@ export class StateMachineApiGatewayExample extends cdk.Construct {
         }],
       });
     return petStoreapi;
-  }
+  };
 
   /**
        * Creates an IAM role for Step Functions.
@@ -207,7 +207,7 @@ export class StateMachineApiGatewayExample extends cdk.Construct {
       ],
     }));
     return workFlowExecutionRole;
-  }
+  };
 
   /**
      * Creates a workflow.
@@ -252,5 +252,5 @@ export class StateMachineApiGatewayExample extends cdk.Construct {
       role: executionRole,
     });
     return stateMachine;
-  }
+  };
 }

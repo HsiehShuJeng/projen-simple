@@ -1,10 +1,11 @@
 #!/usr/bin/env node
 // import 'source-map-support/register';
-import * as cdk from '@aws-cdk/core';
+import * as cdk from 'aws-cdk-lib';
+import { Construct } from 'constructs';
 import { StateMachineApiGatewayExample } from '../../statemachine-examples';
 
 class TypescriptStack extends cdk.Stack {
-  constructor(scope: cdk.Construct, id: string, props?: cdk.StackProps) {
+  constructor(scope: Construct, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
 
     const stageName = 'default';

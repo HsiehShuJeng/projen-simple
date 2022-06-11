@@ -23,8 +23,8 @@ It is the first example mentioned in https://aws.amazon.com/tw/blogs/compute/int
 This constcut will create an API Gateway Rest API with two methods and
 are manipulated by a state machine managed in AWS StepFucntions.
 
-__Implements__: [IConstruct](#constructs-iconstruct), [IConstruct](#aws-cdk-core-iconstruct), [IConstruct](#constructs-iconstruct), [IDependable](#aws-cdk-core-idependable)
-__Extends__: [Construct](#aws-cdk-core-construct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
+__Extends__: [Construct](#constructs-construct)
 
 ### Initializer
 
@@ -35,7 +35,7 @@ __Extends__: [Construct](#aws-cdk-core-construct)
 new StateMachineApiGatewayExample(parent: Construct, name: string, props: StateMachineApiGatewayExampleProps)
 ```
 
-* **parent** (<code>[Construct](#aws-cdk-core-construct)</code>)  *No description*
+* **parent** (<code>[Construct](#constructs-construct)</code>)  *No description*
 * **name** (<code>string</code>)  *No description*
 * **props** (<code>[StateMachineApiGatewayExampleProps](#projen-statemachine-example-statemachineapigatewayexampleprops)</code>)  *No description*
   * **partPath** (<code>string</code>)  The path part for the resource. 
@@ -49,7 +49,7 @@ new StateMachineApiGatewayExample(parent: Construct, name: string, props: StateM
 Name | Type | Description 
 -----|------|-------------
 **executionInput** | <code>string</code> | sample input to start execution for the workflow.
-**stateMachine** | <code>[StateMachine](#aws-cdk-aws-stepfunctions-statemachine)</code> | the representation of a state machine.
+**stateMachine** | <code>[aws_stepfunctions.StateMachine](#aws-cdk-lib-aws-stepfunctions-statemachine)</code> | the representation of a state machine.
 
 
 
