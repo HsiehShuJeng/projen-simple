@@ -1,10 +1,15 @@
 # projen-simple  
-Build a custom construct based on an example in an AWS Blog post and use [projen](https://github.com/projen/projen) to publish to 5 language repositories, i.e., npm, PyPI, Central Maven, NuGet, and Go.       
 [![License](https://img.shields.io/badge/License-Apache%202.0-green)](https://opensource.org/licenses/Apache-2.0) ![Release](https://github.com/HsiehShuJeng/projen-simple/workflows/Release/badge.svg) [![npm downloads](https://img.shields.io/npm/dt/projen-statemachine-example?label=npm%20downloads&style=plastic)](https://img.shields.io/npm/dt/projen-statemachine-example?label=npm%20downloads&style=plastic) [![pypi downloads](https://img.shields.io/pypi/dm/scotthsieh-projen-statemachine?label=pypi%20downloads&style=plastic)](https://img.shields.io/pypi/dm/scotthsieh-projen-statemachine?label=pypi%20downloads&style=plastic) [![NuGet downloads](https://img.shields.io/nuget/dt/Projen.Statemachine?label=NuGet%20downloads&style=plastic)](https://img.shields.io/nuget/dt/Projen.Statemachine?label=NuGet%20downloads&style=plastic) [![repo languages](https://img.shields.io/github/languages/count/HsiehShuJeng/projen-simple?label=repo%20languages&style=plastic)](https://img.shields.io/github/languages/count/HsiehShuJeng/projen-simple?label=repo%20languages&style=plastic)  
+
+| npm (JS/TS) | PyPI (Python) | Maven (Java) | Go | NuGet |
+| --- | --- | --- | --- | --- |
+| [Link](https://www.npmjs.com/package/projen-simple) | [Link](https://pypi.org/project/scotthsieh_projen_statemachine/) | [Link](https://search.maven.org/artifact/io.github.hsiehshujeng/projen-statemachine) | [Link](https://github.com/HsiehShuJeng/projen-statemachine-go) | [Link](https://www.nuget.org/packages/Projen.Statemachine/) |  
+
+Build a custom construct based on an example in an AWS Blog post and use [projen](https://github.com/projen/projen) to publish to 5 language repositories, i.e., npm, PyPI, Central Maven, NuGet, and Go.  
 
 # Architecture  
 This library constrcution is referred to the first example in this AWS blog, [*Introducing Amazon API Gateway service integration for AWS Step Functions*](https://aws.amazon.com/tw/blogs/compute/introducing-amazon-api-gateway-service-integration-for-aws-step-functions/) written by Benjanmin Smith. After you deploy the stack with whatever programming language you like, i.e., Typescript, Python, Java, or C sharp, you'll get a view similar to the following diagram:  
-![image](images/designer_view.png)  
+![image](https://raw.githubusercontent.com/HsiehShuJeng/projen-simple/main/images/designer_view.png)  
 
 # How to utilize polyglot packages and deploy     
 ## TypeScript
