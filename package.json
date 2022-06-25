@@ -57,7 +57,7 @@
     "jsii-pacmak": "^1.61.0",
     "json-schema": "^0.4.0",
     "npm-check-updates": "^12",
-    "projen": "^0.58.15",
+    "projen": "^0.58.17",
     "source-map-support": "^0.5.21",
     "standard-version": "^9",
     "ts-jest": "^27",
@@ -68,7 +68,7 @@
     "constructs": "^10.0.5"
   },
   "dependencies": {
-    "aws-cdk-lib": "^2.29.0",
+    "aws-cdk-lib": "^2.29.1",
     "constructs": "^10.0.5"
   },
   "keywords": [
