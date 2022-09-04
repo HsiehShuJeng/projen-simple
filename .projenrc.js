@@ -76,4 +76,5 @@ const project = new projen.awscdk.AwsCdkConstructLibrary({
     moduleName: 'github.com/HsiehShuJeng/projen-statemachine-go',
   },
 });
+project.package.addPackageResolutions('got@12.3.0');
 project.synth();
