@@ -312,7 +312,7 @@
       },
       "steps": [
         {
-          "exec": "npx npm-check-updates@16 --upgrade --target=minor --peer --dep=dev,peer,prod,optional --filter=esbuild,eslint-import-resolver-typescript,eslint-plugin-import,jsii-diff,jsii-docgen,jsii-pacmak,jsii-rosetta,jsii,projen,source-map-support,typescript,aws-cdk-lib"
+          "exec": "npx npm-check-updates@16 --upgrade --target=minor --peer --dep=dev,peer,prod,optional --filter=esbuild,eslint-import-resolver-typescript,eslint-plugin-import,jsii-diff,jsii-docgen,jsii-pacmak,projen,source-map-support,typescript,aws-cdk-lib"
         },
         {
           "exec": "yarn install --check-files"
