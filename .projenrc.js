@@ -24,6 +24,7 @@ const project = new projen.awscdk.AwsCdkConstructLibrary({
     'constructs@^10.0.5',
   ],
   eslint: true,
+  jsiiVersion: '5.4.x',
   depsUpgradeOptions: {
     workflowOptions: {
       labels: ['auto-approve', 'auto-merge'],
