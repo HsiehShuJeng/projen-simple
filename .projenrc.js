@@ -57,6 +57,7 @@ const project = new projen.awscdk.AwsCdkConstructLibrary({
     '.settings',
     '.vscode/',
     '*.iml',
+    '.DS_Store',
   ],
   releaseToNpm: true,
   publishToPypi: {
