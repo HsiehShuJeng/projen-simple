@@ -49,6 +49,7 @@ target/
 .settings
 .vscode/
 *.iml
+.DS_Store
 /test-reports/
 junit.xml
 /coverage/
